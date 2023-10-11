@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!--stylesheet-->
+    <link href="mainstyle.css" rel="stylesheet" media="all" type="text/css">
+
+
+    <!--javascript-->
+    <script src="javascript/gen-javascript.js" defer></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="title" content="MAGAZINE">
+    <meta property="description" content="We are a Washington DC based magazine made for creative students seeking inspiration based in the area. We cover art, culinary, and music scenes. Feel free to use us as your next reccomendation!">
+    <meta property="url" content="https://themagazine.com/">
+    <meta property="site_name" content="MAGAZINE">
+    
+    <title>MAGAZINE - Report</title>
+
+  </head>
+  <body><!--body section for featured article page-->
+    <div id="page" class="website">
+      <!--Universal Masthead-->
+      <!--includes the website title, nav block/search/menu buttons-->
+      <header id="masthead" class="website-header">
+        <div class="wrap">
+          <div class="primary-header fade">
+            <!-- .website-icon -->
+            <div class="website-icon">
+              <h1 class="website-title">
+                <a href="home.html" rel="home">
+                 <img src="assets/icon images/Rice-icon.png" alt="magazine logo title">
+                </a>
+              </h1>
+            </div>
+            <!--nav-block-->
+            <nav id="nav-block" class="blank" style="display: block;">
+              <span class="blank-block" style="display: inline;"></span>
+            </nav>
+            <!-- .search-wrap -->
+            <!--has the form and a section containing the two input parts, ends up just linking back to home page as there is no database  yet to link the search capability to-->
+            <div class="search-wrap" id="search-wrapper" style="display: none;">
+              <div class="search">
+                <form role="search" method="get" id="searchform" class="searchform" action="https://themagazine.com/" autocomplete="off">
+                  <div>
+                    <input type="text" value name="s" id="search-head" placeholder="Search themagazine.com">
+                    <input type="submit" id="searchsubmit" value="Search">
+                  </div>
+                </form>
+              </div>
+            </div>
+          <!--.menu-wrap-->
+          <!--triggers view and hiding of the nav block above, and full expanded menu "page"-->
+          <div class="menu-wrap" >
+            <ul>
+              <li onmousedown="showAndHideMenu()" class="big-menu" style="display: inline-block;">
+                <!--a id="menu-id">Menu</a-->
+                <img src="assets/icon images/menu-icon.png" alt="menu icon" id="menu-icon">
+              </li>
+              <li onmousedown="showAndHideSearch()" class="search-icon" style="display: inline-block;">
+                <img src="assets/icon images/search-icon.png" alt="search icon" id="search-icon">
+              </li>
+            </ul>
+          </div>
+          </div>
+        </div>
+      </header>
+      <!--Full Menu Expanded-->
+      <!--contains the entire expanded navigation menu: 
+          regular header is still visible
+          list of pages and links to everything
+          image correponding to page
+          page footer including
+            about block
+            columns with information on website
+              info
+              website
+              contact
+            email connection
+              form with input fields
+              with social media icons to connect-->
+      <div class="full-menu" id="expanded-menu-id" style="display: none;">
+        <div class="full-menu-wrap">
+          <div class="page-list-container">
+            <!--Holds all the pages and their links, also id's which image to call to display upon hover-->
+            <ul id="page-list" class="menu">
+              <li id="artPage" class="menu-item">
+                <a href="art-topic-page.html">
+                  Art
+                </a>
+              </li>
+              <li id="foodPage" class="menu-item">
+                <a href="food-topic-page.html">
+                  Food
+                </a>
+              </li>
+              <li id="musicPage" class="menu-item">
+                <a href="music-topic-page.html">
+                  Music
+                </a>
+              </li>
+              <li id="updatesPage" class="menu-item">
+                <a href="updates-page.html">
+                  updates & dates
+                </a>
+              </li>
+              <li id="aboutPage" class="menu-item">
+                <a href="about-page.html">
+                  about
+                </a>
+              </li>
+              <li id="contactPage" class="menu-item">
+                <a href="contact-page.html">
+                  contact
+                </a>
+              </li>
+              <li id="reportPage" class="menu-item">
+                <a href="report.html">
+                  report
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!--Set initial page image-->
+          <div class="page-image">
+            <img class="page-image-specific" id="full-menu-image-preview" src="assets/page images/header images/artPage.jpg" alt="page art image (default)">
+          </div>
+          <!--about section text-->
+          <div class="about-block">
+            <p>
+              We are a Washington DC based magazine made for creative students seeking inspiration based in the area. We cover art, culinary, and music scenes. Feel free to use us as your next reccomendation!
+            </p>
+          </div>
+          <!--columns for information, media, and wrbsite category links-->
+          <!--structured as 
+            header
+            "list" block
+              link items-->
+          <div class="info-wrap">
+            <span class="menu-header">Info</span>
+            <ul class="info">
+              <li id="menu-item-contact" class="menu-item">
+                <a href="">contact</a>
+              </li>
+              <li id="menu-item-career" class="menu-item">
+                <a href="">career</a>
+              </li>
+            </ul>
+          </div>
+          <div class="media-wrap">
+            <span class="menu-header">Media</span>
+            <ul class="info">
+              <li id="menu-item-playlists" class="menu-item">
+                <a href="">playlists</a>
+              </li>
+              <li id="menu-item-films" class="menu-item">
+                <a href="">films</a>
+              </li>
+            </ul>
+          </div>
+          <div class="website-wrap">
+            <span class="menu-header">Website</span>
+            <ul class="info">
+              <li id="menu-item-terms" class="menu-item">
+                <a href="">terms</a>
+              </li>
+              <li id="menu-item-FAQs" class="menu-item">
+                <a href="">FAQs</a>
+              </li>
+            </ul>
+          </div>
+          <!--enter email block with social media link icons-->
+           <!--header span above block,
+              form to input emaik
+                label for initial input
+                input areas for text and  button style-->
+          <div class="socials-wrap" style="display: block;">
+            <div class="newsletter">
+              <span class="menu-header">Newsletter</span>
+              <form action="" method="post" id="subscribe" novalidate>
+                <label for="Email" style="display: none">Email</label>
+                <input type="email" value name="EMAIL" class="email" id="EMAIL" placeholder="enter email" required>
+                <input style type="submit" value="Subscribe" name="subscribe" id="SUBSCRIBE" class="button">
+              </form>
+            </div>
+            <a href="" title="MAGAZINE Instagram">
+              <img src="assets/icon images/instagram.png" alt="Instagram" height="16" width="16">
+            </a>
+            <a href="" title="MAGAZINE Twitter">
+              <img src="assets/icon images/twitter.png" alt="Twitter" height="16" width="16">
+            </a>
+            <a href="" title="MAGAZINE Facebook">
+              <img src="assets/icon images/facebook.png" alt="Facebook" height="16" width="16">
+            </a>
+          </div>
+        </div>
+      </div>
+      <!--START PAGE CONTENT-->
+      <!--gen box-->
+        <div class="main-site-content" id="content">
+            <main class="featured-article-main" id="main">
+              <!--article contains
+                  text section with a 
+                    header, categories linking to section
+                      title of article
+                      font changing buttons for accessibility
+                      initial caption quote content
+                    regular content body
+                      individual paragaraphs for sections-->
+                <article class="featured-article">
+                    <div class="temp-space"></div>
+                    <!--article text part-->
+                    <div class="featured-article-body fade">
+                        <div class="featured-content article-body">
+                            <div class="featured-header">
+                                <div class="featured-categories">
+                                    <a href="art-topic-page.html">Emma Ryla B</a>
+                                </div>
+                                <h1 class="article-title">Final Exam Report</h1>
+                                <button type="font-button" onclick="fontSize('less')" id="btn1">-A</button>
+                                <button type="font-button" onclick="fontSize('original')" id="btn2">A</button>
+                                <button type="font-button" onclick="fontSize('more')" id="btn3">+A</button>
+                            </div>
+                            <div class="article-body-text">
+                                <p class="paragraph-article">
+                                    My website is a platform for creative people in the Washington DC area to get connected to each other and in touch with things to do in the area that may be hard to find/niche otherwise. My goal with the website was to reflect this in its gallery style that draws focus to the images and what they may say, while also aesthetically mirroring the vibes of the target audience. When loading onto the website, I want its content to be driven by images and play with the association: a reader looking for a specific vibe for a dinner recommendation will look at the image of the restaurant first, connect with it, and naturally be drawn to the available content showing what we want the reader to see and associate with that first impression. 
+                                </p>
+                                <p class="paragraph-article">
+                                    Having an idea in mind for the type of feeling I’m after in terms of aesthetics and structure and how that plays with my target audience’s presence, I gravitated to creative-based magazines alike for inspiration. Vogue does the association effect really well, playing with the structure of images and the flow of content in their directory, I implemented their methods of offsetting sidenotes and centering focus content to draw attention. This drew me to more stylistic sources of inspiration with art/culture magazines and editorials. Examples of this are Riposte and Cereal who do gallery-text interactive styling really well. I drew a lot from both in terms of structure - pulling the idea for a focal image on the home page that changes by hovering over different topics from Cereal’s home page. It does an incredibly good job of quickly expressing what each topic is about and what to expect from the section. Riposte was best at structuring stories and features in a way that was engaging and worked well as a home page. Cereals feature archive at the bottom of the home page is a genius example of separation in design- the contrast tone sets the content as being separate from everything else going on, and yet the focus on large images with captions that a reader ends up choosing to look for if interested becomes extraordinarily effective. A classic example of good design I drew on for creative inspiration and their update page structure is Eye Magazine, which maintains a magazine-like feel to its pages with everything being exactly one size not spanning the entire screen. It feels as though you’re flipping through their editorial as you navigate their website, which is a concept I really wanted to implement in my own website. 
+                                </p>
+                                <p class="paragraph-article">
+                                    Making my website accessible in a seamless way was a crucial aspect of its development. Rather than just sticking in features to check a box, accessibility in websites is on the same coin as useability or even aesthetic choices. If my website isn't accessible by nature, the final look would be severely compromised. I implemented some more back-end best practices such as using main and other semantic tags, always being detailed with my alt text in images, and structuring things in a way reachable to disability software by looking at hierarchies in the accessibility section in “inspect”. I also understand the pale gray/neutral-toned text coupled with intense at times and bold images can be a bit of a pain for anyone, and inaccessible in nature. To combat this, I developed font resizing options within article pages, bolder and magnification effects upon hovering over a subject of interest, and ***a screen filter** as the user sees any or all helpful. In making my page responsive, a user can zoom in/resize the screen as needed without things getting out of place or the structure falling apart which is a minor, yet important detail. The website layout itself is also extremely self-explanatory, with everything needed to be properly linked and traceable.  
+                                </p>
+                                <p class="paragraph-article">
+                                    To ensure my website works well with its audience, I’ve been sure to consider best practices of useability in its development. The first thing I considered was clarity in design. When a user visits my website, they probably have a goal in mind and as I developed my design, I attempted to keep those goals in mind and how I can facilitate them. For example, a lot of my users would be on there to find things to do/events to go to for planning purposes, or they might be casually browsing for general recommendations. I made sure the page directory is intuitive- when I think Art, I know to navigate to art scene recommendations. As a detail, I understand the pages given their style facilitating blown-up images, can be fatiguing to scroll through - so I added a button that takes users to the top of the page instantly. Also, recognition - the ability for users to easily “learn” my site- is also crucial to putting its ideas across and maintaining an engaging presence that doesn't overpower the goals of a user. My directory structure was intuitively designed to fit the ideal of simple navigation. Finally, relevance is a factor in the usability of my website. As a bare minimum, my website should be consistently something its users/audience is interested in. Even though there are three main categories and focus, everything holds a pretty consistent aesthetic and tasteful selection that is both familiar to users who might find this site interesting, but also just varied and curated enough to serve as a useful recommendation along the lines but not something they may already know. 
+                                </p>
+                                <p class="paragrpah-article">
+                                    I was not entirely used to CSS and creating responsive designs before this project. The idea of intertwining flex, media queries, and responsive grids where made sense was something that took a lot of research into documentation, studying examples, and understanding existing code to crack. Through a process of studying examples and testing with my own project, I was able to figure out the best ways to structure my website to be as flexible as possible. Another thing I struggled with initially was calling and manipulating classes and ids from javascript, and working with the type that these reference variables end up coming in when being stored in scripts. For example, I had to cast what I thought would, by nature, be an array of class references from an HTML collection to an array of values I could work with. This was one of many javascript/HTML relation bugs I had to get used to when debugging and actualizing my ideas. I also encountered type issues when I attempted to change values of font size in pixels within my javascript code - whereas I treated it as an integer I could set rather than a field of font size that had to exist in quotes as an entity. A final area I feel this project forced me to improve was my ability to move between HTML, CSS, and javascript functionalities when creating a dynamic element of my page. Switching between the three took getting used to, and a lot of work with the documentation to fully understand what I was influencing and how. 
+                                </p>
+                                <p class="paragraph-article">
+                                    The specific feature I’m most proud of was the image and caption on the home page and the fully expanded menu that changes according to hovering over different menu options. It was challenging to properly pull the elements and set things without anything clashing or keeping anything local in the javascript (like simply having variables for the different caption options or image links) but actually pulling an element from one place and putting it in another as needed. I also feel that this feature adds a lot to the aesthetic of the website and I’m glad I incorporated it. A general concept I’m proud of is the way I was able to not only make a page properly respond to resizing and not get all jumbled but specifically style pages/elements differently depending on how the screen is sized - for example changing flex-direction from rows to columns, hiding elements when they can no longer fit, adapting font size, and creating responsive grids for each frame of sizing. This added to the seamlessness of my website and has quite a bit of accessible and aesthetic value. 
+                                </p>
+                                <p class="paragraph-article">
+                                    I think I refined my ideas a bit more as I went along with the project, but through that, I feel I learned the importance of having a clear and set structure and concept going into things. Having that influence in the mind of everything’s purpose allows for a more cohesive and robust result in the long run which I wish I implemented in my practice sooner. Of course, I would like to connect the dots a bit more in terms of some features I implemented - a functioning search bar, functioning email input, and filling out all the links and article pages that are currently dead ends. I also for some reason decided to implement the majority of my structures in terms of lists because of the way I implemented previous projects (starting from bare html content in lists and then adding CSS after the fact), which complicated things due to the unpredictable nature of lists. This also prevented some areas for modularity and overloading in my CSS which would’ve made things a lot cleaner and more coherent to understand. I switched halfway through to a more div wrapper-based approach after being faced with debugging challenges, but I didn’t have time to migrate everything else to that format. I would have also liked to populate the page images and perhaps some of the featured articles from the topic pages themselves, but this would have required a more complicated database/data references within the code. 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--article image part-->
+                    <!--formatted in terms of portrait and regular images
+                        set in their plaves
+                          added in groups depending on types-->
+                    <div class="article-images clear">
+                        <div class="article-images-wrap">
+                          <img src="assets/page images/report page images/File-tree.png">
+                          <img class="article-img" src="assets/page images/report page images/home-page-mock.jpg">
+                          <img class="article-img" src="assets/page images/report page images/art-page-mock.jpg">
+                          <img class="article-img" src="assets/page images/report page images/update-page-mock.jpg">
+                          <img class="article-img" src="assets/page images/report page images/about-page-mock.jpg">
+                          <img class="article-img" src="assets/page images/report page images/contact-page-mock.jpg">
+                          <img class="article-img" src="assets/page images/report page images/article-page-mock.jpg">
+                        </div>
+                    </div>
+                </article>
+            </main>
+        </div>
+        <!--Reference Content-->
+        <!--header
+            grid content
+              landscapt/portrait image type
+                image link
+                unordered list of references
+                  text body-->
+        <div class="further-reading-block">
+            <div class="further-reading-wrap">
+                <div class="further-reading">
+                    <h3>Source References</h3>
+                    <!--further reading grid content assuming image, caption, content type, and paragraph-->
+                    <div class="further-reading-grid">
+                        
+                        <div class="image-citation-block">
+                          IMGES FROM PINTEREST SOURCED HERE - no rights reserved, NOT MY IMAGES: 
+
+                          No Author [Pinterest post]. Pinterest. Retrieved March 2, 2023, from https://www.pinterest.com/pin/668995719671519641/
+                          The New York Times [Pinterest post]. Pinterest. Retrieved March 2, 2023, https://www.nytimes.com/2012/08/07/health/nutrition/elizabeths-braised-leeks-with-parmesan-recipes-for-health.html?_r=0
+                          Don Shaffer [Pinterest post]. Pinterest. Retreived March 3. 2023, from https://www.pinterest.com/pin/668995719671216611/
+                          ƙılɛყ[Pinterest post]. Pinterest. Retreived March 3 2023, https://www.pinterest.com/pin/668995719671211038/
+                          Réalités March 1968. Retreived March 3 2023, https://www.flickr.com/photos/sandiv999/5810426064/
+                          Paul Cezanne Feuilles Et Fleurs (Recto) & Etude Apres Une Sculpture Antique: Faune Et Enfant (Verso) ( A Double-Sided Drawing) [Pinterest post]. Retreived March 3 2023, https://www.mutualart.com/Artwork/Feuilles-Et-Fleurs--Recto----Etude-Apres/F87C2CCC443D4975?utm_source=alert_b&utm_medium=email&utm_campaign=al_by_artist
+                          Inèz Lin[Pinterest post]. Pinterest. Retreived March 3 2023, https://www.pinterest.com/pin/668995719671161936/
+                          CLIFF KUANG. "04-28-09 The Year’s Best Magazine Design" Fast Company. Retreived March 3 2023, https://www.fastcompany.com/1275415/years-best-magazine-design?epik=dj0yJnU9TGh0VTBvemdyaW4xSVJ0U0FFSDhlZEhrb1liY2VRbVcmcD0wJm49SFBBZmJ0U3BSWHJHZHJBazN0RmgtdyZ0PUFBQUFBR1FNNkJz
+                          William Lai Taken on March 31, 2008. Retreived March 3 2023, https://www.flickr.com/photos/weilian/2409936990/
+                          Post by Denis Trente-Huittessan. Henri Matisse (Cateau-Cambrésis, 1869 - Nice, 1954) "Vue sur la baie de Tanger" dét. (1912 - 1913) musée de Grenoble (Isère, France). Retreived March 3 2023, https://www.flickr.com/photos/89235234@N00/12266249124/
+                          Mark Rothko, Untitled (Red on Red) , 1969 © Kate Rothko Prizel & Christopher Rothko / Artists Rights Society Private collection of Blema and H. Arnold Steinberg. Retreived March 3 2023, https://dailyrothko.tumblr.com/post/183395302350/mark-rothko-untitled-red-on-red-1969-kate
+                          Lara's Wonderland [Pinterest post]. Pinterest. Retreived March 3 2023, https://www.pinterest.com/pin/668995719671142447
+                          kate @miffyswrld[Pinterest post]. Pinterest. Retreived March 3 2023, https://www.pinterest.com/pin/668995719671118563/
+                          魍魉 魑魅 [Pinterest post]. Pinterest. Retreived March 3 2023, https://www.pinterest.com/pin/668995719671082326/
+                          Reddit's Official Streetwear Community. Retrieved March 4, https://pin.it/4qOe3Fz 
+                          Sonny - Dining Tas, retrieved March 4th https://pin.it/3zkVvlf 
+                          No author [pinterest post] retrieved March 4th https://pin.it/5PRGp4O 
+                          Morgan, retrieved March https://pin.it/4k8BnI4 
+                          Instagram post, retrieved March 4 https://pin.it/1dnqCXu
+                          Hanna barbera, pinterest post, retrieved March 4, 2023 https://pin.it/2Bm3Bbu 
+                          LoveVivienne, pinterest post, retrieved March 4, 2023 https://pin.it/25uejCp 
+                          Kazushige Sumi, retrieved March 4, 2O23 https://pin.it/4VSFjMC 
+                          domi !!, retrieved March 4, 2023 https://pin.it/5uZRjg7 
+                          Brianna Collins, [Flickr], retrieved March 4, 2023 https://pin.it/5nJsTqF 
+                          Nikki McLaughlin, retrieved March 4, 2023 https://pin.it/3u22xjz 
+                          xYume, retrieved March 4, 2023 https://pin.it/2mSP7P6 
+                          DAWNING Crow, [Twitter] retrieved March 4, 2023 https://pin.it/7grzpjr 
+                          Sotheby's,(#11) Paul Cézanne, retrieved March 4, 2023 https://pin.it/7m0sAHU 
+                          Via Maris,Mark Rothko (Green and Maroon, 1953) retrieved March 4, 2023 https://pin.it/6C5pLDa 
+                          Kid, pinterest post, retrieved March 4, 2023 https://pin.it/3uenmgH 
+                          No author, tumblr post, retrieved March 4, 2023 https://pin.it/6HSOFs6 
+                          Akira Kusaka illustration,tumblr post, retrieved March 4, 2023 https://pin.it/K9L8CSU 
+                          Claire, cat art, pinterest post, retrieved March 4, 2023 https://pin.it/4eSqdvt 
+                          Maureen Francis, pinterest post, retrieved March 4, 2023 https://pin.it/5BCnwMx 
+                          Hanako Web, pinterest post, retrieved March 4, 2023 https://pin.it/7xn01NV 
+                          Eater, pinterest post, retrieved March 4, 2023 https://pin.it/2P0RNiB 
+                          Anna nycz, [Flickr], retrieved March 4, 2023 https://pin.it/736cwI3 
+                          Redlipstickresurrected, [tumblr], retrieved March 4, 2023 https://pin.it/CxLPWuI 
+                          Paul Cézanne | ARBRES (Circa 1890) | MutualArt, pinterest post, retrieved March 4, 2023 https://pin.it/2amEgdg 
+                          joana avillez, [tumblr], retrieved March 4, 2023 https://pin.it/3sqbWCp 
+                          Felix Inclusis: Photo, [tumblr], retrieved March 4, 2023 https://pin.it/25vpeja 
+                          27x108,pinterest post, retrieved March 4, 2023 https://pin.it/1HrRx5R 
+                          Spotify, pinterest post, retrieved March 4, 2023 https://pin.it/3ixhZj9 
+                          The Guardian, pinterest post, retrieved March 4, 2023 https://pin.it/1wlH2cv 
+                          Don Shaffer, pinterest post, retrieved March 4, 2023 https://pin.it/3ybHeRw 
+                          Lot Of Music, pinterest post, retrieved March 4, 2023 https://pin.it/3MIyird 
+                          @prettylittlecottage,pinterest post, [tumblr] retrieved March 4, 2023 https://pin.it/1IlKQA3 
+                          xYume, pinterest post, retrieved March 4, 2023 https://pin.it/4rVXpjp 
+                          No author, pinterest post, retrieved March 4, 2023 https://pin.it/2oIRs6j 
+                          No author, pinterest post [tumblr] retrieved March 4, 2023 https://pin.it/3tkDYZk 
+                          WeHeartlt, pinterest post, retrieved March 4, 2023 https://pin.it/60FHoI4 
+                          Cassie McPinkiePants, pinterest post, retrieved March 4, 2023 https://pin.it/6ONl6ya 
+                          Behance, pinterest post, A moodboard by Dahlia https://pin.it/4Y0cwZb 
+                          No author, pinterest post, retrieved March 4, 2023 https://pin.it/13J4dMr 
+                        </div>
+                        <ul class = 'reference-list'>
+                          <li>https://www.eyemagazine.com/blog</li>
+                          <li>https://www.vogue.com/v2/offers/</li>
+                          <li>https://www.ripostemagazine.com/homepage/</li>
+                          <li>https://readcereal.com/</li>
+                          <li>(for help with slideshow structure) https://www.w3schools.com/howto/howto_js_slideshow.asp</li>
+                          <li>(for help with search bar error) https://www.geeksforgeeks.org/create-a-search-bar-using-html-and-css/</li>
+                          <li>All icon images sourced from https://fonts.google.com/icons open source icons, not my own.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="further-reading-block">
+            <div class="further-reading-wrap">
+                <div class="further-reading">
+                    <h3>Wireframes (they're ugly but got the job done!)</h3>
+                    <!--grid for wireframes/testing-->
+                    <div class="further-reading-grid" >
+                      <div class="further-reading-content landscape">
+                        <a href="">
+                            <img src="assets/page images/report page images/wireframe-5.jpg">
+                        </a>
+                      </div>
+                      <div class="further-reading-content landscape">
+                        <a href="">
+                          <img src="assets/page images/report page images/wireframe-6.jpg">
+                        </a>
+                      </div> 
+                      <div class="further-reading-content landscape">
+                        <a href="">
+                          <img src="assets/page images/report page images/wireframe-7.jpg">
+                        </a>
+                      </div> 
+                      <div class="further-reading-content landscape">
+                        <a href="">
+                          <img src="assets/page images/report page images/wireframe-4.jpg">
+                        </a>
+                      </div> 
+                    </div>
+                    <div class="further-reading-grid" >
+                      <div class="further-reading-content landscape">
+                        <a href="">
+                            <img src="assets/page images/report page images/wireframe-1.jpg">
+                        </a>
+                      </div>
+                      <div class="further-reading-content landscape">
+                        <a href="">
+                          <img src="assets/page images/report page images/wireframe-2.jpg">
+                        </a>
+                      </div> 
+                      <div class="further-reading-content landscape">
+                        <a href="">
+                          <img src="assets/page images/report page images/wireframe-3.jpg">
+                        </a>
+                      </div> 
+                    </div>
+                </div>
+            </div>
+          </div>
+        <!--scroll to top button-->
+    <button onclick="toTopFunction()" id="scrollToTopBtn">
+      <img src="assets/icon images/to-top-btn.png" alt="back to top button">
+    </button>
+        <!--PAGE FOOTER GENERAL-->
+        <!--footer has 
+      a block for website information
+      a block for columns of info
+        info header span
+          content items for each
+      a block for newsletter signup and socials
+        with a header
+        form
+          inputs and base
+        social media icon links-->
+        <div id="ending" class="footer">
+            <div class="website-information">
+              <div class="about-text">
+                <p>"We are a Washington DC based magazine made for creative students seeking inspiration based in the area. We cover art, culinary, and music scenes. Feel free to use us as your next reccomendation!"</p>
+              </div>
+              <!--footer column content -->
+              <div class="footer-menu-block">
+                <div>
+                  <span>Info</span>
+                  <ul class="info">
+                    <li id="menu-item-contact" class="menu-item">
+                      <a href="">contact</a>
+                    </li>
+                    <li id="menu-item-career" class="menu-item">
+                      <a href="">career</a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <div class="media-wrap">
+                    <span class="menu-header">Media</span>
+                    <ul class="info">
+                      <li id="menu-item-playlists" class="menu-item">
+                        <a href="">playlists</a>
+                      </li>
+                      <li id="menu-item-films" class="menu-item">
+                        <a href="">films</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div>
+                  <span class="menu-header">Website</span>
+                  <ul class="info">
+                    <li id="menu-item-terms" class="menu-item">
+                      <a href="">terms</a>
+                    </li>
+                    <li id="menu-item-FAQs" class="menu-item">
+                      <a href="">FAQs</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!--social footer content consisting of forum and icon images/links-->
+              <div class="footer-social">
+                <span class="menu-header">Newsletter</span>
+                  <form action="" method="post" id="subscribe" novalidate>
+                    <label for="Email" style="display: none">Email</label>
+                    <input type="email" value name="EMAIL" class="email" id="EMAIL" placeholder="enter email" required>
+                    <input style type="submit" value="Subscribe" name="subscribe" id="SUBSCRIBE" class="button">
+                  </form>
+                <a href="" title="MAGAZINE Instagram">
+                  <img src="assets/icon images/instagram.png" alt="Instagram" height="16" width="16">
+                </a>
+                <a href="" title="MAGAZINE Twitter">
+                  <img src="assets/icon images/twitter.png" alt="Twitter" height="16" width="16">
+                </a>
+                <a href="" title="MAGAZINE Facebook">
+                  <img src="assets/icon images/facebook.png" alt="Facebook" height="16" width="16">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+    </body>
+</html>

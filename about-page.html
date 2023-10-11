@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en-GB">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!--stylesheet-->
+        <link href="css/mainstyle.css" rel="stylesheet" media="all" type="text/css">
+        <!--javascript-->
+        <script src="javascript/slideshow.js" defer></script>
+        <script src="javascript/gen-javascript.js" defer></script>
+    
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="title" content="MAGAZINE-information">
+        <meta property="description" content="about page on magazine's activities">
+        <meta property="url" content="https://themagazine.com/information">
+        <meta property="site_name" content="MAGAZINE">
+        
+        <title>About Page</title>
+    
+      </head>
+      <body><!--Body section for about page describing website and what it's about-->
+        <div id="page" class="website">
+            <!--Universal Masthead-->
+            <!--includes the website title, nav block/search/menu buttons-->
+      <header id="masthead" class="website-header">
+        <div class="wrap">
+          <div class="primary-header fade">
+            <!-- .website-icon -->
+            <div class="website-icon">
+              <h1 class="website-title">
+                <a href="html/home.html" rel="home">
+                 <img src="assets/icon images/Rice-icon.png" alt="magazine logo title">
+                </a>
+              </h1>
+            </div>
+            <!--nav-block-->
+            <nav id="nav-block" class="blank" style="display: block;">
+              <span class="blank-block" style="display: inline;"></span>
+            </nav>
+            <!-- .search-wrap -->
+            <!--has the form and a section containing the two input parts, ends up just linking back to home page as there is no database  yet to link the search capability to-->
+            <div class="search-wrap" id="search-wrapper" style="display: none;">
+              <div class="search">
+                <form role="search" method="get" id="searchform" class="searchform" action="https://themagazine.com/" autocomplete="off">
+                  <div>
+                    <input type="text" value name="s" id="search-head" placeholder="Search themagazine.com">
+                    <input type="submit" id="searchsubmit" value="Search">
+                  </div>
+                </form>
+              </div>
+            </div>
+          <!--.menu-wrap-->
+          <!--triggers view and hiding of the nav block above, and full expanded menu "page"-->
+          <div class="menu-wrap" >
+            <ul>
+              <li onmousedown="showAndHideMenu()" class="big-menu" style="display: inline-block;">
+                <!--a id="menu-id">Menu</a-->
+                <img src="assets/icon images/menu-icon.png" alt="menu icon" id="menu-icon">
+              </li>
+              <li onmousedown="showAndHideSearch()" class="search-icon" style="display: inline-block;">
+                <img src="assets/icon images/search-icon.png" alt="search icon" id="search-icon">
+              </li>
+            </ul>
+          </div>
+          </div>
+        </div>
+      </header>
+      <!--Full Menu Expanded-->
+      <!--contains the entire expanded navigation menu: 
+          regular header is still visible
+          list of pages and links to everything
+          image correponding to page
+          page footer including
+            about block
+            columns with information on website
+              info
+              website
+              contact
+            email connection
+              form with input fields
+              with social media icons to connect-->
+      <div class="full-menu" id="expanded-menu-id" style="display: none;">
+        <div class="full-menu-wrap">
+          <div class="page-list-container">
+            <!--Holds all the pages and their links, also id's which image to call to display upon hover-->
+            <ul id="page-list" class="menu">
+              <li id="artPage" class="menu-item">
+                <a href="html/art-topic-page.html">
+                  Art
+                </a>
+              </li>
+              <li id="foodPage" class="menu-item">
+                <a href="html/food-topic-page.html">
+                  Food
+                </a>
+              </li>
+              <li id="musicPage" class="menu-item">
+                <a href="html/music-topic-page.html">
+                  Music
+                </a>
+              </li>
+              <li id="updatesPage" class="menu-item">
+                <a href="html/updates-page.html">
+                  updates & dates
+                </a>
+              </li>
+              <li id="aboutPage" class="menu-item">
+                <a href="html/about-page.html">
+                  about
+                </a>
+              </li>
+              <li id="contactPage" class="menu-item">
+                <a href="html/contact-page.html">
+                  contact
+                </a>
+              </li>
+              <li id="reportPage" class="menu-item">
+                <a href="html/report.html">
+                  report
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!--Set initial page image-->
+          <div class="page-image">
+            <img class="page-image-specific" id="full-menu-image-preview" src="assets/page images/header images/artPage.jpg" alt="page art image (default)">
+          </div>
+          <!--about section text-->
+          <div class="about-block">
+            <p>
+              We are a Washington DC based magazine made for creative students seeking inspiration based in the area. We cover art, culinary, and music scenes. Feel free to use us as your next reccomendation!
+            </p>
+          </div>
+          <!--columns for information, media, and wrbsite category links-->
+          <!--structured as 
+            header
+            "list" block
+              link items-->
+          <div class="info-wrap">
+            <span class="menu-header">Info</span>
+            <ul class="info">
+              <li id="menu-item-contact" class="menu-item">
+                <a href="">contact</a>
+              </li>
+              <li id="menu-item-career" class="menu-item">
+                <a href="">career</a>
+              </li>
+            </ul>
+          </div>
+          <div class="media-wrap">
+            <span class="menu-header">Media</span>
+            <ul class="info">
+              <li id="menu-item-playlists" class="menu-item">
+                <a href="">playlists</a>
+              </li>
+              <li id="menu-item-films" class="menu-item">
+                <a href="">films</a>
+              </li>
+            </ul>
+          </div>
+          <div class="website-wrap">
+            <span class="menu-header">Website</span>
+            <ul class="info">
+              <li id="menu-item-terms" class="menu-item">
+                <a href="">terms</a>
+              </li>
+              <li id="menu-item-FAQs" class="menu-item">
+                <a href="">FAQs</a>
+              </li>
+            </ul>
+          </div>
+          <!--enter email block with social media link icons-->
+          <!--header span above block,
+              form to input emaik
+                label for initial input
+                input areas for text and  button style-->
+          <div class="socials-wrap" style="display: block;">
+            <div class="newsletter">
+              <span class="menu-header">Newsletter</span>
+              <form action="" method="post" id="subscribe" novalidate>
+                <label for="Email" style="display: none">Email</label>
+                <input type="email" value name="EMAIL" class="email" id="EMAIL" placeholder="enter email" required>
+                <input style type="submit" value="Subscribe" name="subscribe" id="SUBSCRIBE" class="button">
+              </form>
+            </div>
+            <a href="" title="MAGAZINE Instagram">
+              <img src="assets/icon images/instagram.png" alt="Instagram" height="16" width="16">
+            </a>
+            <a href="" title="MAGAZINE Twitter">
+              <img src="assets/icon images/twitter.png" alt="Twitter" height="16" width="16">
+            </a>
+            <a href="" title="MAGAZINE Facebook">
+              <img src="assets/icon images/facebook.png" alt="Facebook" height="16" width="16">
+            </a>
+          </div>
+        </div>
+      </div>
+        <!--CONTENT START-->
+        <main class="about-contact-main">
+          <!--header image is centered with the caption-->
+            <header class="about-us-head center">
+                <h2 class="about-us-title">  
+                     <img src="assets/icon images/about-us-icon (1).png" alt="about logo title">
+                     <p>for the DC artist</p>
+                </h2>
+            </header>
+            <!--about us section-->
+            <!--Start of sections that split the art, food, music topic coverings that descripe what we do and how we do it-->
+            <div class="about-us-wrap">
+                <div class="our-mission-text">
+                    <h2>art</h2>
+                    <p>We cover the scope of art and where to find artistic scenes within the DC/Maryland/Virginia area. All the galleries, exhibitions, independent artists, and your own works that you submit to us are topics of interest here!</p>
+                </div>
+                <div class="our-mission-image center">
+                    <img src="assets/page images/about page images/about-us-image-3.jpg" alt="washington DC cherry blossoms" width="400">
+                </div>
+                <div class="our-mission-image center">
+                    <img src="assets/page images/about page images/about-us-image2.jpg" alt="cat reading (our magazine)!">
+                </div>
+                <div class="our-mission-text">
+                    <h2>music</h2>
+                    <p>Music scenes in the area are one of the best ways to connect to other people in person and online. We not onyl provide reccomendations to our favorite local and global bands, but where to find live shows in the area and when. This ranges from ticket updates, to small bands and big bands alike. Message us to have your event/show showcased!</p>
+                </div>
+                <div class="our-mission-text">
+                    <h2>food</h2>
+                    <p>This is the best place for reccomendations of any range of food in the area. Between the cheapest quickest eats, to where to find your favourite foods, to the best high end eats worth your money - we've got it! Contact us to register your business/grandmas kitchen to get an article showcase!</p>
+                </div>
+                <div class="our-mission-image center">
+                    <img src="assets/page images/about page images/about-us-image-4.jpg" alt="cat reading (our magazine)!">
+                </div>
+            </div>
+            <!--about us block-->
+            <div class="about-us-block">
+                <div class="about-us-text">
+                    <h2>our mission</h2>
+                    <p>We aim to connect creative individuals within the DC, Maryland, Virginia area to creative scenes for inspiration. We understand it's difficult to break into the right communities of people in a city such as this one, which is why we created this resource for connection, inspiration, and to facilitate your next adventure. Feel free to contact us with your reccomendations, your music, restaurant, or general questions you may have at any time! -Love, the team here :) </p>
+                </div>
+            </div>
+            <!--divider image-->
+            <div class="about-us-image center">
+                <img src="assets/page images/about page images/divider-img.jpg" alt="asetique island, maryland">
+            </div>
+        </main>
+        <!--scroll to top button-->
+      <button onclick="toTopFunction()" id="scrollToTopBtn">
+        <img src="assets/icon images/to-top-btn.png" alt="back to top button">
+      </button>
+        <!--Page Footer-->
+        <!--footer has 
+      a block for website information
+      a block for columns of info
+        info header span
+          content items for each
+      a block for newsletter signup and socials
+        with a header
+        form
+          inputs and base
+        social media icon links-->
+      <footer id="ending" class="footer">
+        <div class="website-information">
+          <div class="about-text">
+            <p>We are a Washington DC based magazine made for creative students seeking inspiration based in the area. We cover art, culinary, and music scenes. Feel free to use us as your next reccomendation!</p>
+          </div>
+          <!--information columns section of footer-->
+          <div class="footer-menu-block">
+            <div class="info-wrap">
+              <span class="menu-header">Info</span>
+              <ul class="info">
+                <li id="menu-item-contact" class="footer-menu-item">
+                  <a href="">contact</a>
+                </li>
+                <li id="menu-item-career" class="footer-menu-item">
+                  <a href="">career</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <div class="media-wrap">
+                <span class="menu-header">Media</span>
+                <ul class="info">
+                  <li id="menu-item-playlists" class="footer-menu-item">
+                    <a href="">playlists</a>
+                  </li>
+                  <li id="menu-item-films" class="footer-menu-item">
+                    <a href="">films</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <span class="menu-header">Website</span>
+              <ul class="info">
+                <li id="menu-item-terms" class="footer-menu-item">
+                  <a href="">terms</a>
+                </li>
+                <li id="menu-item-FAQs" class="footer-menu-item">
+                  <a href="">FAQs</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!--social media form section of footer-->
+          <div class="footer-social">
+            <span class="menu-header">Newsletter</span>
+              <form action="" method="post" id="subscribe" novalidate>
+                <label for="Email" style="display: none">Email</label>
+                <input type="email" value name="EMAIL" class="email" id="EMAIL" placeholder="enter email" required>
+                <input style type="submit" value="Subscribe" name="subscribe" id="SUBSCRIBE" class="button">
+              </form>
+            <a href="" title="MAGAZINE Instagram">
+              <img src="assets/icon images/instagram.png" alt="Instagram" height="16" width="16">
+            </a>
+            <a href="" title="MAGAZINE Twitter">
+              <img src="assets/icon images/twitter.png" alt="Twitter" height="16" width="16">
+            </a>
+            <a href="" title="MAGAZINE Facebook">
+              <img src="assets/icon images/facebook.png" alt="Facebook" height="16" width="16">
+            </a>
+          </div>
+        </div>
+      </footer>
+    </body>
+</html>

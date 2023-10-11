@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="en-GB">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+     <!--stylesheet-->
+        <link href="mainstyle.css" rel="stylesheet" media="all" type="text/css">
+    
+    <!--javascript-->
+    <script src="javascript/gen-javascript.js" defer></script>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="title" content="MAGAZINE">
+        <meta property="description" content="Music Page of RICE Magazine">
+        <meta property="url" content="https://themagazine.com/">
+        <meta property="site_name" content="MAGAZINE">
+    
+        <title>RICE Magazine - Music</title>
+
+    </head>
+    <body>
+        <div id="page" class="website">
+            <!--Universal Masthead-->
+            <header id="masthead" class="website-header">
+              <div class="wrap">
+                <div class="primary-header fade">
+                  <!-- .website-icon -->
+                  <div class="website-icon">
+                    <h1 class="website-title">
+                      <a href="home.html" rel="home">
+                       <img src="assets/icon images/Rice-icon.png" alt="magazine logo title">
+                      </a>
+                    </h1>
+                  </div>
+                  <!--nav-block-->
+                  <nav id="nav-block" class="blank" style="display: block;">
+                    <span class="blank-block" style="display: inline;"></span>
+                  </nav>
+                  <!-- .search-wrap -->
+                  <div class="search-wrap" id="search-wrapper" style="display: none;">
+                    <div class="search">
+                      <form role="search" method="get" id="searchform" class="searchform" action="https://themagazine.com/" autocomplete="off">
+                        <div>
+                          <input type="text" value name="s" id="search-head" placeholder="Search themagazine.com">
+                          <input type="submit" id="searchsubmit" value="Search">
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                <!--.menu-wrap-->
+                <div class="menu-wrap" >
+                  <ul>
+                    <li onmousedown="showAndHideMenu()" class="big-menu" style="display: inline-block;">
+                      <!--a id="menu-id">Menu</a-->
+                      <img src="assets/icon images/menu-icon.png" alt="menu icon" id="menu-icon">
+                    </li>
+                    <li onmousedown="showAndHideSearch()" class="search-icon" style="display: inline-block;">
+                      <img src="assets/icon images/search-icon.png" alt="search icon" id="search-icon">
+                    </li>
+                  </ul>
+                </div>
+                </div>
+              </div>
+            </header>
+            <!--Full Menu Expanded-->
+            <div class="full-menu" id="expanded-menu-id" style="display: none;">
+              <div class="full-menu-wrap">
+                <div class="page-list-container">
+                  <!--Holds all the pages and their links, also id's which image to call to display upon hover-->
+                  <ul id="page-list" class="menu">
+                    <li id="artPage" class="menu-item">
+                      <a href="art-topic-page.html">
+                        Art
+                      </a>
+                    </li>
+                    <li id="foodPage" class="menu-item">
+                      <a href="food-topic-page.html">
+                        Food
+                      </a>
+                    </li>
+                    <li id="musicPage" class="menu-item">
+                      <a href="music-topic-page.html">
+                        Music
+                      </a>
+                    </li>
+                    <li id="updatesPage" class="menu-item">
+                      <a href="updates-page.html">
+                        updates & dates
+                      </a>
+                    </li>
+                    <li id="aboutPage" class="menu-item">
+                      <a href="about-page.html">
+                        about
+                      </a>
+                    </li>
+                    <li id="contactPage" class="menu-item">
+                      <a href="contact-page.html">
+                        contact
+                      </a>
+                    </li>
+                    <li id="reportPage" class="menu-item">
+                      <a href="report.html">
+                        report
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <!--Set initial page image-->
+                <div class="page-image">
+                  <img class="page-image-specific" id="full-menu-image-preview" src="assets/page images/header images/artPage.jpg" alt="page art image (default)">
+                </div>
+                <!--about section text-->
+                <div class="about-block">
+                  <p>
+                    We are a Washington DC based magazine made for creative students seeking inspiration based in the area. We cover art, culinary, and music scenes. Feel free to use us as your next reccomendation!
+                  </p>
+                </div>
+                <!--columns for information, media, and wrbsite category links-->
+                <div class="info-wrap">
+                  <span class="menu-header">Info</span>
+                  <ul class="info">
+                    <li id="menu-item-contact" class="menu-item">
+                      <a href="">contact</a>
+                    </li>
+                    <li id="menu-item-career" class="menu-item">
+                      <a href="">career</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="media-wrap">
+                  <span class="menu-header">Media</span>
+                  <ul class="info">
+                    <li id="menu-item-playlists" class="menu-item">
+                      <a href="">playlists</a>
+                    </li>
+                    <li id="menu-item-films" class="menu-item">
+                      <a href="">films</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="website-wrap">
+                  <span class="menu-header">Website</span>
+                  <ul class="info">
+                    <li id="menu-item-terms" class="menu-item">
+                      <a href="">terms</a>
+                    </li>
+                    <li id="menu-item-FAQs" class="menu-item">
+                      <a href="">FAQs</a>
+                    </li>
+                  </ul>
+                </div>
+                <!--enter email block with social media link icons-->
+                <div class="socials-wrap" style="display: block;">
+                  <div class="newsletter">
+                    <span class="menu-header">Newsletter</span>
+                    <form action="" method="post" id="subscribe" novalidate>
+                      <label for="Email" style="display: none">Email</label>
+                      <input type="email" value name="EMAIL" class="email" id="EMAIL" placeholder="enter email" required>
+                      <input style type="submit" value="Subscribe" name="subscribe" id="SUBSCRIBE" class="button">
+                    </form>
+                  </div>
+                  <a href="" title="MAGAZINE Instagram">
+                    <img src="assets/icon images/instagram.png" alt="Instagram" height="16" width="16">
+                  </a>
+                  <a href="" title="MAGAZINE Twitter">
+                    <img src="assets/icon images/twitter.png" alt="Twitter" height="16" width="16">
+                  </a>
+                  <a href="" title="MAGAZINE Facebook">
+                    <img src="assets/icon images/facebook.png" alt="Facebook" height="16" width="16">
+                  </a>
+                </div>
+              </div>
+            </div>
+        <!--Music Page Content-->
+        <div class="art-page-content" id="content">
+            <div class="art-page-wrap">
+                <div class="art-page-grid">
+                  <!--split between landscape, portriat, and wide landscape div sections-->
+                  <!--content item type
+                      image ref
+                      caption section
+                        category
+                        header
+                        content notes-->
+                    <div class="art-content-item landscape">
+                        <a href="">
+                            <img class="" src="assets/page images/music page images/landscape-img-1.jpg" alt="">
+                        </a>
+                        <div class="content-caption">
+                            <div class="article-category">
+                                <h5>music | punk</h5>
+                            </div>
+                            <h2>
+                                <a href="">Show from the DREGS</a>
+                            </h2>
+                            <div class="article-notes">
+                                <p>
+                                    <span class="article-notes">upcoming at The Shaw venue 03/19 @7pm</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="art-content-item landscape">
+                        <a href="">
+                            <img class="" src="assets/page images/music page images/landscape-img-2.jpg" alt="">
+                        </a>
+                        <div class="content-caption">
+                            <div class="article-category">
+                                <h5>music | rock | grunge</h5>
+                            </div>
+                            <h2>
+                                <a href="">Show by Kings</a>
+                            </h2>
+                            <div class="article-notes">
+                                <p>
+                                    <span class="article-notes">At Merriwether Pavillion @6pm - tickets can be found on their website</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="art-content-item widelandscape">
+                      <a href="">
+                          <img class="" src="assets/page images/music page images/wide-landscape-img-3.jpg" alt="cezanne painting 2">
+                      </a>
+                      <div class="content-caption">
+                          <div class="article-category">
+                              <h5>rock | classics</h5>
+                          </div>
+                          <h2>
+                              <a href="">THE CURE UPCOMING SHOW</a>
+                          </h2>
+                          <div class="article-notes">
+                              <p>
+                                  <span class="article-notes">In relatiation to ticketmaster and the monopoly they have on access ot live music, they're releasing standard price tickets directly from their website. Be sure to sign up for their waiting list to get in line! May shows are going fast for the east coast.</span>
+                              </p>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="art-content-item portrait">
+                        <a href="">
+                            <img class="" src="assets/page images/music page images/portrait-img-4.jpg" alt="">
+                        </a>
+                        <div class="content-caption">
+                            <div class="article-category">
+                                <h5>rock | shoegaze | alternative</h5>
+                            </div>
+                            <h2>
+                                <a href="">Deathconsciousness</a>
+                            </h2>
+                            <div class="article-notes">
+                                <p>
+                                    <span class="article-notes">OUR ALBUM PICKS: Bloodhail, Eternal worm devours connecticuit, earthmover</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="art-content-item portrait">
+                      <a href="">
+                          <img class="" src="assets/page images/music page images/portrait-img-5.jpg" alt="">
+                      </a>
+                      <div class="content-caption">
+                          <div class="article-category">
+                              <h5>rap | upcoming</h5>
+                          </div>
+                          <h2>
+                              <a href="">Icespice with Pinkpantress</a>
+                          </h2>
+                          <div class="article-notes">
+                              <p>
+                                  <span class="article-notes">An iconic duo to say the least, check out both of their current recent albums and projects!</span>
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="art-content-item portrait">
+                    <a href="">
+                        <img class="" src="assets/page images/music page images/portrait-img-6.jpg" alt="">
+                    </a>
+                    <div class="content-caption">
+                        <div class="article-category">
+                            <h5>jazz | vocals</h5>
+                        </div>
+                        <h2>
+                            <a href="">Lamp</a>
+                        </h2>
+                        <div class="article-notes">
+                            <p>
+                                <span class="article-notes">Beautiful album with an even more beautiful album cover, Japanese band Lamp with their cult following is recruiting new members - to the cult that is.</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="art-content-item portrait">
+                  <a href="">
+                      <img class="" src="assets/page images/music page images/portrait-img-7.jpg" alt="">
+                  </a>
+                  <div class="content-caption">
+                      <div class="article-category">
+                          <h5>Music | indie | rock</h5>
+                      </div>
+                      <h2>
+                          <a href="">Alex G </a>
+                      </h2>
+                      <div class="article-notes">
+                          <p>
+                              <span class="article-notes">From his show on U street club in DC he's enlisted a greater following, which is all the more reason to check out his older songs!</span>
+                          </p>
+                      </div>
+                  </div>
+              </div>
+              <div class="art-content-item portrait">
+                <a href="">
+                    <img class="" src="assets/page images/music page images/portrait-img-8.jpg" alt="">
+                </a>
+                <div class="content-caption">
+                    <div class="article-category">
+                        <h5>jazz | vocal</h5>
+                    </div>
+                    <h2>
+                        <a href="">Ichiko Aoba</a>
+                    </h2>
+                    <div class="article-notes">
+                        <p>
+                            <span class="article-notes">Concert happening in DC on the 16th of May - be sure to get tickets before resell sharks do!</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="art-content-item portrait">
+              <a href="">
+                  <img class="" src="assets/page images/music page images/portrait-img-9.jpg" alt="">
+              </a>
+              <div class="content-caption">
+                  <div class="article-category">
+                      <h5>Jazz</h5>
+                  </div>
+                  <h2>
+                      <a href="">Asleep Among Endives</a>
+                  </h2>
+                  <div class="article-notes">
+                      <p>
+                          <span class="article-notes">One of our top reccomendations of the year with her most beautiful vocals and sensual guitar playing yet. </span>
+                      </p>
+                  </div>
+              </div>
+          </div>
+                </div>
+            </div>
+            <!--Further Reading Content-->
+            <!--exists in a big block box , wrapper, then reading section
+                header
+                grid section for items
+                  landscapt type and regular type
+                    href 
+                      image containing further reading image
+                      caption content
+                        article category with link
+                        article header
+                        article content text caption-->
+        <div class="further-reading-block">
+          <div class="further-reading-wrap">
+              <div class="further-reading">
+                  <h3>Further Reading</h3>
+                  <div class="further-reading-grid">
+                      <div class="further-reading-content landscape">
+                          <a href="">
+                              <img src="assets/page images/article page images/further-reading-article-1.jpg" alt="cezanne painting - fruits watercolor">
+                          </a>
+                          <div class="further-reading-content-caption">
+                              <div class="featured-article-category">
+                                  <a href="">Art</a>
+                              </div>
+                              <h2>
+                                  <a href="">On Cezanne - Simplicity</a>
+                              </h2>
+                              <div class="further-sample">
+                                  <p>
+                                      Cezanne and his avovation to impressionistic simplicity has been a force in the art world. 
+                                  </p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="further-reading-content">
+                          <a href="">
+                              <img src="assets/page images/article page images/further-reading-article-2.jpg" alt="Henri Matisse (Cateau-Cambrésis, 1869 - Nice, 1954) Vue sur la baie de Tanger dét. (1912 - 1913) musée de Grenoble (Isère, France)">
+                          </a>
+                          <div class="further-reading-content-caption">
+                              <div class="featured-article-category">
+                                  <a href="">Art</a>
+                              </div>
+                              <h2>
+                                  <a href="">Matisse - on Nice</a>
+                              </h2>
+                              <div class="further-sample">
+                                  <p>
+                                      Matisse depicting his time in Nice, France.
+                                  </p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="further-reading-content">
+                          <a href="">
+                              <img src="assets/page images/article page images/further-reading-article-3.jpg" alt="On Lovers - Lamp Album">
+                          </a>
+                          <div class="further-reading-content-caption">
+                              <div class="featured-article-category">
+                                  <a href="">Music</a>
+                              </div>
+                              <h2>
+                                  <a href="">For Lovers - Lamp</a>
+                                  
+                              </h2>
+                              <div class="further-sample">
+                                  <p>
+                                      One of the most influencial albums in this genre by artist that changed the scene. 
+                                  </p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="further-reading-content">
+                          <a href="">
+                              <img src="assets/page images/article page images/further-reading-article-4.jpg" alt="Hannah Höch: 5 curiosidades para conocer a la referente feminista del dadaísmo">
+                          </a>
+                          <div class="further-reading-content-caption">
+                              <div class="featured-article-category">
+                                  <a href="">Art</a>
+                              </div>
+                              <h2>
+                                  <a href=''>Dadaism at the Ntl. Gallery</a>
+                              </h2>
+                              <div class="further-sample">
+                                  <p>
+                                      Dadaism is a movement that is still relevant today.
+                                  </p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+        <!--scroll to top button-->
+    <button onclick="toTopFunction()" id="scrollToTopBtn">
+      <img src="assets/icon images/to-top-btn.png" alt="back to top button">
+    </button>
+        <!--Page Footer-->
+        <!--column footer organized as 
+            information
+            column 1
+              content
+            column2
+              content
+            column3
+              content-->
+        <div id="ending" class="footer">
+            <div class="website-information">
+            <div class="about-text">
+                <p>"We are a Washington DC based magazine made for creative students seeking inspiration based in the area. We cover art, culinary, and music scenes. Feel free to use us as your next reccomendation!"</p>
+            </div>
+            <div class="footer-menu-block">
+                <div>
+                    <span>Info</span>
+                    <ul class="info">
+                        <li id="menu-item-contact" class="menu-item">
+                            <a href="">contact</a>
+                        </li>
+                        <li id="menu-item-career" class="menu-item">
+                            <a href="">career</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="media-wrap">
+                        <span class="menu-header">Media</span>
+                        <ul class="info">
+                            <li id="menu-item-playlists" class="menu-item">
+                                <a href="">playlists</a>
+                            </li>
+                            <li id="menu-item-films" class="menu-item">
+                                <a href="">films</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <span class="menu-header">Website</span>
+                    <ul class="info">
+                        <li id="menu-item-terms" class="menu-item">
+                         <a href="">terms</a>
+                        </li>
+                        <li id="menu-item-FAQs" class="menu-item">
+                            <a href="">FAQs</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--Page footer organized as 
+                header
+                form 
+                  input 
+                  input
+                  label
+                icons social media-->
+            <div class="footer-social">
+                <span class="menu-header">Newsletter</span>
+                    <form action="" method="post" id="subscribe" novalidate>
+                        <label for="Email" style="display: none">Email</label>
+                        <input type="email" value name="EMAIL" class="email" id="EMAIL" placeholder="enter email" required>
+                        <input style type="submit" value="Subscribe" name="subscribe" id="SUBSCRIBE" class="button">
+                    </form>
+                    <a href="" title="MAGAZINE Instagram">
+                        <img src="assets/icon images/instagram.png" alt="Instagram" height="16" width="16">
+                    </a>
+                    <a href="" title="MAGAZINE Twitter">
+                        <img src="assets/icon images/twitter.png" alt="Twitter" height="16" width="16">
+                    </a>
+                    <a href="" title="MAGAZINE Facebook">
+                        <img src="assets/icon images/facebook.png" alt="Facebook" height="16" width="16">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

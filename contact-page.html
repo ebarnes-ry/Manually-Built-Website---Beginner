@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en-GB">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!--stylesheet-->
+        <link href="mainstyle.css" rel="stylesheet" media="all" type="text/css">
+        <!--javascript-->
+        <script src="javascript/slideshow.js" defer></script>
+        <script src="javascript/gen-javascript.js" defer></script>
+    
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="title" content="MAGAZINE-information">
+        <meta property="description" content="contact page on magazine's activities">
+        <meta property="url" content="https://themagazine.com/information">
+        <meta property="site_name" content="MAGAZINE">
+        
+        <title>Contact Page</title>
+    
+      </head>
+      <body><!--body content for contact page including the regular universal masthead, hidden full menu, footer, and website content-->
+        <div id="page" class="website">
+            <!--Universal Masthead-->
+            <!--includes the website title, nav block/search/menu buttons-->
+      <header id="masthead" class="website-header">
+        <div class="wrap">
+          <div class="primary-header fade">
+            <!-- .website-icon -->
+            <div class="website-icon">
+              <h1 class="website-title">
+                <a href="home.html" rel="home">
+                 <img src="assets/icon images/Rice-icon.png" alt="magazine logo title">
+                </a>
+              </h1>
+            </div>
+            <!--nav-block-->
+            <nav id="nav-block" class="blank" style="display: block;"><!--initialize display to block for now, will be changed with interaction!-->
+              <span class="blank-block" style="display: inline;"></span><!--initialize display to inline for now, will be changed with interaction!-->
+            </nav>
+            <!-- .search-wrap -->
+            <!--has the form and a section containing the two input parts, ends up just linking back to home page as there is no database  yet to link the search capability to-->
+            <div class="search-wrap" id="search-wrapper" style="display: none;"><!--initialize display to none, will be changed with access!-->
+              <div class="search">
+                <form role="search" method="get" id="searchform" class="searchform" action="https://themagazine.com/" autocomplete="off">
+                  <div>
+                    <input type="text" value name="s" id="search-head" placeholder="Search themagazine.com">
+                    <input type="submit" id="searchsubmit" value="Search">
+                  </div>
+                </form>
+              </div>
+            </div>
+          <!--.menu-wrap-->
+          <!--triggers view and hiding of the nav block above, and full expanded menu "page"-->
+          <div class="menu-wrap" >
+            <ul>
+              <li onmousedown="showAndHideMenu()" class="big-menu" style="display: inline-block;">
+                <!--a id="menu-id">Menu</a-->
+                <img src="assets/icon images/menu-icon.png" alt="menu icon" id="menu-icon">
+              </li>
+              <li onmousedown="showAndHideSearch()" class="search-icon" style="display: inline-block;">
+                <img src="assets/icon images/search-icon.png" alt="search icon" id="search-icon">
+              </li>
+            </ul>
+          </div>
+          </div>
+        </div>
+      </header>
+      <!--Full Menu Expanded-->
+       <!--contains the entire expanded navigation menu: 
+          regular header is still visible
+          list of pages and links to everything
+          image correponding to page
+          page footer including
+            about block
+            columns with information on website
+              info
+              website
+              contact
+            email connection
+              form with input fields
+              with social media icons to connect-->
+      <div class="full-menu" id="expanded-menu-id" style="display: none;">
+        <div class="full-menu-wrap">
+          <div class="page-list-container">
+            <!--Holds all the pages and their links, also id's which image to call to display upon hover-->
+            <ul id="page-list" class="menu">
+              <li id="artPage" class="menu-item">
+                <a href="art-topic-page.html">
+                  Art
+                </a>
+              </li>
+              <li id="foodPage" class="menu-item">
+                <a href="food-topic-page.html">
+                  Food
+                </a>
+              </li>
+              <li id="musicPage" class="menu-item">
+                <a href="music-topic-page.html">
+                  Music
+                </a>
+              </li>
+              <li id="updatesPage" class="menu-item">
+                <a href="updates-page.html">
+                  updates & dates
+                </a>
+              </li>
+              <li id="aboutPage" class="menu-item">
+                <a href="about-page.html">
+                  about
+                </a>
+              </li>
+              <li id="contactPage" class="menu-item">
+                <a href="contact-page.html">
+                  contact
+                </a>
+              </li>
+              <li id="reportPage" class="menu-item">
+                <a href="report.html">
+                  report
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!--Set initial page image-->
+          <div class="page-image">
+            <img class="page-image-specific" id="full-menu-image-preview" src="assets/page images/header images/artPage.jpg" alt="page art image (default)">
+          </div>
+          <!--about section text-->
+          <div class="about-block">
+            <p>
+              We are a Washington DC based magazine made for creative students seeking inspiration based in the area. We cover art, culinary, and music scenes. Feel free to use us as your next reccomendation!
+            </p>
+          </div>
+          <!--columns for information, media, and wrbsite category links-->
+          <!--structured as 
+            header
+            "list" block
+              link items-->
+          <div class="info-wrap">
+            <span class="menu-header">Info</span>
+            <ul class="info">
+              <li id="menu-item-contact" class="menu-item">
+                <a href="">contact</a>
+              </li>
+              <li id="menu-item-career" class="menu-item">
+                <a href="">career</a>
+              </li>
+            </ul>
+          </div>
+          <div class="media-wrap">
+            <span class="menu-header">Media</span>
+            <ul class="info">
+              <li id="menu-item-playlists" class="menu-item">
+                <a href="">playlists</a>
+              </li>
+              <li id="menu-item-films" class="menu-item">
+                <a href="">films</a>
+              </li>
+            </ul>
+          </div>
+          <div class="website-wrap">
+            <span class="menu-header">Website</span>
+            <ul class="info">
+              <li id="menu-item-terms" class="menu-item">
+                <a href="">terms</a>
+              </li>
+              <li id="menu-item-FAQs" class="menu-item">
+                <a href="">FAQs</a>
+              </li>
+            </ul>
+          </div>
+          <!--enter email block with social media link icons-->
+          <!--header span above block,
+              form to input emaik
+                label for initial input
+                input areas for text and  button style-->
+          <div class="socials-wrap" style="display: block;">
+            <div class="newsletter">
+              <span class="menu-header">Newsletter</span>
+              <form action="" method="post" id="subscribe" novalidate>
+                <label for="Email" style="display: none">Email</label>
+                <input type="email" value name="EMAIL" class="email" id="EMAIL" placeholder="enter email" required>
+                <input style type="submit" value="Subscribe" name="subscribe" id="SUBSCRIBE" class="button">
+              </form>
+            </div>
+            <a href="" title="MAGAZINE Instagram">
+              <img src="assets/icon images/instagram.png" alt="Instagram" height="16" width="16">
+            </a>
+            <a href="" title="MAGAZINE Twitter">
+              <img src="assets/icon images/twitter.png" alt="Twitter" height="16" width="16">
+            </a>
+            <a href="" title="MAGAZINE Facebook">
+              <img src="assets/icon images/facebook.png" alt="Facebook" height="16" width="16">
+            </a>
+          </div>
+        </div>
+      </div>
+        <!--CONTENT START-->
+        <main class="about-contact-main">
+            <!--contact section-->
+            <!--header
+                  heading title
+                    image for the icon logo
+                    hours displayed-->
+            <header class="contact-us-head center">
+                <h2 class="contact-us-title">  
+                     <img src="assets/icon images/contact-us-icon (1).png" alt="about logo title">
+                     <p>we respond between the hours of 09:00 - 15:00 EST</p>
+                </h2>
+            </header>
+            <!--contact information icon grid-->
+            <!--all the contact information boxes
+                  image icon for each button
+                  their type
+                  their caption-->
+            <div class="contact-information center">
+                <div>
+                    <span>
+                        <img src="assets/page images/about page images/phone-icon.jpg" alt="miffy phone icon">
+                    </span>
+                    <h2>phone</h2>
+                    <p class="contact-description">+1 (301) 300 8714</p>
+                </div>
+                <div>
+                    <span>
+                        <img src="assets/page images/about page images/email-us.jpg" alt="miffy email icon">
+                    </span>
+                    <h2>email</h2>
+                    <p class="contact-description">ricemagazine@gmail.com</p>
+                </div>
+                <div>
+                    <span>
+                        <img src="assets/page images/about page images/meet-us.jpg" alt="miffy meeting icon">
+                    </span>
+                    <h2>meet us</h2>
+                    <p class="contact-description">enquire on meeting times</p>
+                </div>
+                <div>
+                    <span>
+                        <img src="assets/page images/about page images/enquiry-icon.jpg" alt="miffy enquiry icon">
+                    </span>
+                    <h2>enquiry</h2>
+                    <p class="contact-description">fill out an enquiry below</p>
+                </div>
+            </div>
+            <!--Enquiry Form Section-->
+            <div class="enquiry-form-wrap">
+              <!--enquiry form section-->
+              <!--sections displaying input, header contact us-->
+              <!--placeholders set and input text area block-->
+                <div class="enquiry-form">
+                    <form>
+                        <h2>contact us</h2>
+                        <section>
+                            <input type="text" class="enquiry-form-content" placeholder="first name" required>
+                            <input type="text" class="enquiry-form-content" placeholder="surname">
+                        </section>
+                        <section>
+                            <input type="text" class="enquiry-form-content" placeholder="email" required>
+                            <input type="text" class="enquiry-form-content" placeholder="phone">
+                        </section>
+                        <input type="textarea" rows="4" class="enquiry-form-content" placeholder="your message">
+                    </form>
+                </div>
+                <!--division image for enquiry form-->
+                <div class="enquiry-form-img">
+                    <img src="assets/page images/contact page image/enquiry-form-image.png" alt="enquiry form image to the right, of">
+                </div>
+            </div>
+        </main>
+        <!--scroll to top button-->
+    <button onclick="toTopFunction()" id="scrollToTopBtn">
+      <img src="assets/icon images/to-top-btn.png" alt="back to top button">
+    </button>
+        <!--Page Footer-->
+        <!--footer has 
+      a block for website information
+      a block for columns of info
+        info header span
+          content items for each
+      a block for newsletter signup and socials
+        with a header
+        form
+          inputs and base
+        social media icon links-->
+      <footer id="ending" class="footer">
+        <div class="website-information">
+          <div class="about-text">
+            <p>We are a Washington DC based magazine made for creative students seeking inspiration based in the area. We cover art, culinary, and music scenes. Feel free to use us as your next reccomendation!</p>
+          </div>
+          <div class="footer-menu-block">
+           <!--page footer form and social media section with information-->
+            <div class="info-wrap">
+              <span class="menu-header">Info</span>
+              <ul class="info">
+                <li id="menu-item-contact" class="footer-menu-item">
+                  <a href="">contact</a>
+                </li>
+                <li id="menu-item-career" class="footer-menu-item">
+                  <a href="">career</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <div class="media-wrap">
+                <span class="menu-header">Media</span>
+                <ul class="info">
+                  <li id="menu-item-playlists" class="footer-menu-item">
+                    <a href="">playlists</a>
+                  </li>
+                  <li id="menu-item-films" class="footer-menu-item">
+                    <a href="">films</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <span class="menu-header">Website</span>
+              <ul class="info">
+                <li id="menu-item-terms" class="footer-menu-item">
+                  <a href="">terms</a>
+                </li>
+                <li id="menu-item-FAQs" class="footer-menu-item">
+                  <a href="">FAQs</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!--social section with form input-->
+          <div class="footer-social">
+            <span class="menu-header">Newsletter</span>
+              <form action="" method="post" id="subscribe" novalidate>
+                <label for="Email" style="display: none">Email</label>
+                <input type="email" value name="EMAIL" class="email" id="EMAIL" placeholder="enter email" required>
+                <input style type="submit" value="Subscribe" name="subscribe" id="SUBSCRIBE" class="button">
+              </form>
+            <a href="" title="MAGAZINE Instagram">
+              <img src="assets/icon images/instagram.png" alt="Instagram" height="16" width="16">
+            </a>
+            <a href="" title="MAGAZINE Twitter">
+              <img src="assets/icon images/twitter.png" alt="Twitter" height="16" width="16">
+            </a>
+            <a href="" title="MAGAZINE Facebook">
+              <img src="assets/icon images/facebook.png" alt="Facebook" height="16" width="16">
+            </a>
+          </div>
+        </div>
+      </footer>
+    </body>
+</html>

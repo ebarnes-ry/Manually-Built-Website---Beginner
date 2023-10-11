@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en-GB">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!--stylesheet-->
+        <link href="mainstyle.css" rel="stylesheet" media="all" type="text/css">
+        <!--javascript-->
+        <script src="javascript/slideshow.js" defer></script>
+        <script src="javascript/gen-javascript.js" defer></script>
+    
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="title" content="MAGAZINE-information">
+        <meta property="description" content="updates and information page on magazine's activities">
+        <meta property="url" content="https://themagazine.com/information">
+        <meta property="site_name" content="MAGAZINE">
+        
+        <title>Updates & Information</title>
+    
+      </head>
+      <body>
+        <div id="page" class="website">
+            <!--Universal Masthead-->
+            <!--includes the website title, nav block/search/menu buttons-->
+      <header id="masthead" class="website-header">
+        <div class="wrap">
+          <div class="primary-header fade">
+            <!-- .website-icon -->
+            <div class="website-icon">
+              <h1 class="website-title">
+                <a href="home.html" rel="home">
+                 <img src="assets/icon images/Rice-icon.png" alt="magazine logo title">
+                </a>
+              </h1>
+            </div>
+            <!--nav-block-->
+            <nav id="nav-block" class="blank" style="display: block;">
+              <span class="blank-block" style="display: inline;"></span>
+            </nav>
+            <!-- .search-wrap -->
+            <!--has the form and a section containing the two input parts, ends up just linking back to home page as there is no database  yet to link the search capability to-->
+            <div class="search-wrap" id="search-wrapper" style="display: none;">
+              <div class="search">
+                <form role="search" method="get" id="searchform" class="searchform" action="https://themagazine.com/" autocomplete="off">
+                  <div>
+                    <input type="text" value name="s" id="search-head" placeholder="Search themagazine.com">
+                    <input type="submit" id="searchsubmit" value="Search">
+                  </div>
+                </form>
+              </div>
+            </div>
+          <!--.menu-wrap-->
+          <!--triggers view and hiding of the nav block above, and full expanded menu "page"-->
+          <div class="menu-wrap" >
+            <ul>
+              <li onmousedown="showAndHideMenu()" class="big-menu" style="display: inline-block;">
+                <!--a id="menu-id">Menu</a-->
+                <img src="assets/icon images/menu-icon.png" alt="menu icon" id="menu-icon">
+              </li>
+              <li onmousedown="showAndHideSearch()" class="search-icon" style="display: inline-block;">
+                <img src="assets/icon images/search-icon.png" alt="search icon" id="search-icon">
+              </li>
+            </ul>
+          </div>
+          </div>
+        </div>
+      </header>
+      <!--Full Menu Expanded-->
+      <!--contains the entire expanded navigation menu: 
+          regular header is still visible
+          list of pages and links to everything
+          image correponding to page
+          page footer including
+            about block
+            columns with information on website
+              info
+              website
+              contact
+            email connection
+              form with input fields
+              with social media icons to connect-->
+      <div class="full-menu" id="expanded-menu-id" style="display: none;">
+        <div class="full-menu-wrap">
+          <div class="page-list-container">
+            <!--Holds all the pages and their links, also id's which image to call to display upon hover-->
+            <ul id="page-list" class="menu">
+              <li id="artPage" class="menu-item">
+                <a href="art-topic-page.html">
+                  Art
+                </a>
+              </li>
+              <li id="foodPage" class="menu-item">
+                <a href="food-topic-page.html">
+                  Food
+                </a>
+              </li>
+              <li id="musicPage" class="menu-item">
+                <a href="music-topic-page.html">
+                  Music
+                </a>
+              </li>
+              <li id="updatesPage" class="menu-item">
+                <a href="updates-page.html">
+                  updates & dates
+                </a>
+              </li>
+              <li id="aboutPage" class="menu-item">
+                <a href="about-page.html">
+                  about
+                </a>
+              </li>
+              <li id="contactPage" class="menu-item">
+                <a href="contact-page.html">
+                  contact
+                </a>
+              </li>
+              <li id="reportPage" class="menu-item">
+                <a href="report.html">
+                  report
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!--Set initial page image-->
+          <div class="page-image">
+            <img class="page-image-specific" id="full-menu-image-preview" src="assets/page images/header images/artPage.jpg" alt="page art image (default)">
+          </div>
+          <!--about section text-->
+          <div class="about-block">
+            <p>
+              We are a Washington DC based magazine made for creative students seeking inspiration based in the area. We cover art, culinary, and music scenes. Feel free to use us as your next reccomendation!
+            </p>
+          </div>
+          <!--columns for information, media, and wrbsite category links-->
+          <!--structured as 
+            header
+            "list" block
+              link items-->
+          <div class="info-wrap">
+            <span class="menu-header">Info</span>
+            <ul class="info">
+              <li id="menu-item-contact" class="menu-item">
+                <a href="">contact</a>
+              </li>
+              <li id="menu-item-career" class="menu-item">
+                <a href="">career</a>
+              </li>
+            </ul>
+          </div>
+          <div class="media-wrap">
+            <span class="menu-header">Media</span>
+            <ul class="info">
+              <li id="menu-item-playlists" class="menu-item">
+                <a href="">playlists</a>
+              </li>
+              <li id="menu-item-films" class="menu-item">
+                <a href="">films</a>
+              </li>
+            </ul>
+          </div>
+          <div class="website-wrap">
+            <span class="menu-header">Website</span>
+            <ul class="info">
+              <li id="menu-item-terms" class="menu-item">
+                <a href="">terms</a>
+              </li>
+              <li id="menu-item-FAQs" class="menu-item">
+                <a href="">FAQs</a>
+              </li>
+            </ul>
+          </div>
+          <!--enter email block with social media link icons-->
+          <!--header span above block,
+              form to input emaik
+                label for initial input
+                input areas for text and  button style-->
+          <div class="socials-wrap" style="display: block;">
+            <div class="newsletter">
+              <span class="menu-header">Newsletter</span>
+              <form action="" method="post" id="subscribe" novalidate>
+                <label for="Email" style="display: none">Email</label>
+                <input type="email" value name="EMAIL" class="email" id="EMAIL" placeholder="enter email" required>
+                <input style type="submit" value="Subscribe" name="subscribe" id="SUBSCRIBE" class="button">
+              </form>
+            </div>
+            <a href="" title="MAGAZINE Instagram">
+              <img src="assets/icon images/instagram.png" alt="Instagram" height="16" width="16">
+            </a>
+            <a href="" title="MAGAZINE Twitter">
+              <img src="assets/icon images/twitter.png" alt="Twitter" height="16" width="16">
+            </a>
+            <a href="" title="MAGAZINE Facebook">
+              <img src="assets/icon images/facebook.png" alt="Facebook" height="16" width="16">
+            </a>
+          </div>
+        </div>
+      </div>
+<!--BEGINNING OF CONTENT-->
+            <!--main content area
+                line over everything in the main block
+                two columns
+                left column
+                  date content blocks
+                    date on left half
+                    content on right
+                      image
+                      header and caption
+                  line between each block
+                right column
+                  featured article image
+                  line below
+                  image slideshow content
+                    buttons to change
+                    image influenced by JS
+                    caption that changes with JS-->
+            <main class="main-area">
+                <div class="update-sections-line">
+                    <div class="date-section-block">
+                        <div class="date-section">
+                            <div class="date">
+                                <h3 class="date-text">19 March 2023</h3>
+                            </div>
+                            <div class="date-content">
+                                <div>
+                                    <a href="">
+                                        <img src="assets/page images/updates page images/date-image1.jpg" alt="have a nice life vinyl" width="220">
+                                    </a>
+                                </div>
+                                <div class="date-content-caption">
+                                    <h4 class="date-content-header">
+                                        <a href="">
+                                            Have a Nice Life on Tour at the Anthem
+                                        </a>
+                                    </h4>
+                                    <p class="date-content-body">
+                                        With their ethereal sounds and cinematic aesthetic Have a Nice life is worth hearing live at least once in your lifetime. See them Wednesday night at 7:30p - tickets linked on their website. 
+                                    </p>
+                                </div>
+                            </div>
+    
+                        </div>
+                        <div class="date-section-line">
+                            <div class="date">
+                                <h3 class="date-text">31 March 2023</h3>
+                            </div>
+                            <div class="date-content">
+                                <div>
+                                    <a href="">
+                                        <img src="assets/page images/updates page images/date-image2.jpg" alt="beach house album cover" width="220">
+                                    </a>
+                                </div>
+                                <div class="date-content-caption">
+                                    <h4 class="date-content-header">
+                                        <a href="">
+                                            Beach House to release a new album. 
+                                        </a>
+                                    </h4>
+                                    <p class="date-content-body">
+                                        fdadsgalhej
+                                    </p>
+                                </div>
+                            </div>
+    
+                        </div>
+                        <div class="date-section-line">
+                            <div class="date">
+                                <h3 class="date-text">19 March 2023</h3>
+                            </div>
+                            <div class="date-content">
+                                <div>
+                                    <a href="">
+                                        <img src="assets/page images/updates page images/date-image3.jpg" alt="this is happening on 19 March 2023!" width="220">
+                                    </a>
+                                </div>
+                                <div class="date-content-caption">
+                                    <h4 class="date-content-header">
+                                        <a href="">
+                                            Sample content update.
+                                        </a>
+                                    </h4>
+                                    <p class="date-content-body">
+                                        Section of current and upcoming events - stay up to date...
+                                    </p>
+                                </div>
+                            </div>
+    
+                        </div>
+                        <div class="date-section-line">
+                            <div class="date">
+                                <h3 class="date-text">19 March 2023</h3>
+                            </div>
+                            <div class="date-content">
+                                <div>
+                                    <a href="">
+                                        <img src="assets/page images/updates page images/date-image4.jpg" alt="this is happening on 19 March 2023!" width="220">
+                                    </a>
+                                </div>
+                                <div class="date-content-caption">
+                                    <h4 class="date-content-header">
+                                        <a href="">
+                                            Sample content update.
+                                        </a>
+                                    </h4>
+                                    <p class="date-content-body">
+                                        Section of current and upcoming events - stay up to date...
+                                    </p>
+                                </div>
+                            </div>
+    
+                        </div>
+                        <div class="date-section-line">
+                            <div class="date">
+                                <h3 class="date-text">19 March 2023</h3>
+                            </div>
+                            <div class="date-content">
+                                <div>
+                                    <a href="">
+                                        <img src="assets/page images/updates page images/date-image5.jpg" alt="this is happening on 19 March 2023!" width="220">
+                                    </a>
+                                </div>
+                                <div class="date-content-caption">
+                                    <h4 class="date-content-header">
+                                        <a href="">
+                                            Sample content update.
+                                        </a>
+                                    </h4>
+                                    <p class="date-content-body">
+                                        Section of current and upcoming events - stay up to date...
+                                    </p>
+                                </div>
+                            </div>
+    
+                        </div>
+                        <div class="date-section-line">
+                            <div class="date">
+                                <h3 class="date-text">19 March 2023</h3>
+                            </div>
+                            <div class="date-content">
+                                <div>
+                                    <a href="">
+                                        <img src="assets/page images/updates page images/date-image6.jpg" alt="this is happening on 19 March 2023!" width="220">
+                                    </a>
+                                </div>
+                                <div class="date-content-caption">
+                                    <h4 class="date-content-header">
+                                        <a href="">
+                                            Sample content update.
+                                        </a>
+                                    </h4>
+                                    <p class="date-content-body">
+                                        Section of current and upcoming events - stay up to date...
+                                    </p>
+                                </div>
+                            </div>
+    
+                        </div>
+                        <div class="date-section-line">
+                            <div class="date">
+                                <h3 class="date-text">19 March 2023</h3>
+                            </div>
+                            <div class="date-content">
+                                <div>
+                                    <a href="">
+                                        <img src="assets/page images/updates page images/date-image7.jpg" alt="this is happening on 19 March 2023!" width="220">
+                                    </a>
+                                </div>
+                                <div class="date-content-caption">
+                                    <h4 class="date-content-header">
+                                        <a href="">
+                                            Sample content update.
+                                        </a>
+                                    </h4>
+                                    <p class="date-content-body">
+                                        Section of current and upcoming events - stay up to date...
+                                    </p>
+                                </div>
+                            </div>
+    
+                        </div>
+                    </div>
+                    <div class="updates-sidebar-block">
+                        <div class="coming-soon">
+                            <a href="featured-article.html" class="coming-soon-img center">
+                                <img src="assets/page images/article page images/article-img-5.jpg" alt="Coming soon update!">
+                            </a>
+                            <a href="featured-article.html" class="update-content-header">
+                                <strong  id="top-story-head">Most recent featured article - On Mark Rothko at the National Gallery</strong>
+                            </a>
+                            <p1 class="top-story-text-box">
+                                "On the top floor of the West Side of the National Gallery is a single room housing some of the most heartwrenching works in art history."
+                            </p1>
+                        </div>
+                        <div class="update-line">
+                            <div class="new-stuff-slideshow">
+                                <a class="last" onclick="addSlides(-1)">&#10094;</a>
+                                <a class="next" onclick="addSlides(1)">&#10095;</a>
+                                <div class="updates-slideshow fade">
+                                    <div class="number-slide">1/4</div>
+                                    <img src="assets/page images/updates page images/update-image1.jpg" alt="first image in slideshow, about " style="width: 100%;">
+                                    <div class="slide-caption">Join our team! We are hiring. Fill out an application TODAY</div>
+                                </div>
+                                <div class="updates-slideshow fade">
+                                    <div class="number-slide">2/4</div>
+                                    <img src="assets/page images/updates page images/update-img2.jpg" alt="first image in slideshow, about " style="width: 100%;">
+                                    <div class="slide-caption">We are hosting a cleanup of our website and archive pieces...if you'd like to volunteer, join us!</div>
+                                </div>
+                                <div class="updates-slideshow fade">
+                                    <div class="number-slide">3/4</div>
+                                    <img src="assets/page images/updates page images/update-img3.jpg" alt="first image in slideshow, about " style="width: 100%;">
+                                    <div class="slide-caption">We are launching a radioshow on Tuesdays from 2pm-3pm! Tune in for some tunes :)</div>
+                                </div>
+                                <div class="updates-slideshow fade">
+                                    <div class="number-slide">4/4</div>
+                                    <img src="assets/page images/updates page images/update-img4.jpg" alt="first image in slideshow, about " style="width: 100%;">
+                                    <div class="slide-caption">We will be covering a story on the band BAND, see them live 01/22 and read our story out soon...</div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </main>
+        <!--scroll to top button-->
+    <button onclick="toTopFunction()" id="scrollToTopBtn">
+      <img src="assets/icon images/to-top-btn.png" alt="back to top button">
+    </button>
+        <!--Page Footer-->
+        <!--footer has 
+      a block for website information
+      a block for columns of info
+        info header span
+          content items for each
+      a block for newsletter signup and socials
+        with a header
+        form
+          inputs and base
+        social media icon links-->
+      <footer id="ending" class="footer">
+        <div class="website-information">
+          <div class="about-text">
+            <p>We are a Washington DC based magazine made for creative students seeking inspiration based in the area. We cover art, culinary, and music scenes. Feel free to use us as your next reccomendation!</p>
+          </div>
+          <div class="footer-menu-block">
+            <!--information columsn-->
+            <div class="info-wrap">
+              <span class="menu-header">Info</span>
+              <ul class="info">
+                <li id="menu-item-contact" class="footer-menu-item">
+                  <a href="">contact</a>
+                </li>
+                <li id="menu-item-career" class="footer-menu-item">
+                  <a href="">career</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <div class="media-wrap">
+                <span class="menu-header">Media</span>
+                <ul class="info">
+                  <li id="menu-item-playlists" class="footer-menu-item">
+                    <a href="">playlists</a>
+                  </li>
+                  <li id="menu-item-films" class="footer-menu-item">
+                    <a href="">films</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <span class="menu-header">Website</span>
+              <ul class="info">
+                <li id="menu-item-terms" class="footer-menu-item">
+                  <a href="">terms</a>
+                </li>
+                <li id="menu-item-FAQs" class="footer-menu-item">
+                  <a href="">FAQs</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="footer-social">
+            <span class="menu-header">Newsletter</span>
+              <form action="" method="post" id="subscribe" novalidate>
+                <label for="Email" style="display: none">Email</label>
+                <input type="email" value name="EMAIL" class="email" id="EMAIL" placeholder="enter email" required>
+                <input style type="submit" value="Subscribe" name="subscribe" id="SUBSCRIBE" class="button">
+              </form>
+            <a href="" title="MAGAZINE Instagram">
+              <img src="assets/icon images/instagram.png" alt="Instagram" height="16" width="16">
+            </a>
+            <a href="" title="MAGAZINE Twitter">
+              <img src="assets/icon images/twitter.png" alt="Twitter" height="16" width="16">
+            </a>
+            <a href="" title="MAGAZINE Facebook">
+              <img src="assets/icon images/facebook.png" alt="Facebook" height="16" width="16">
+            </a>
+          </div>
+        </div>
+      </footer>
+    </body>
+</html>

@@ -1,0 +1,1832 @@
+/*----General style------*/
+element.style{
+    overflow: auto;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+html{
+    font-family: "Chronicle Text G1 A", "Chronicle Text G1 B";
+}
+body{/*initializes all standard body values */
+    font-family: "Verlag A", "Verlag B";
+
+    padding-top: 70px;
+    color: #404040;
+    font-size: 1rem;
+    line-height: 1.5;
+
+    margin: 0;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+
+    display: block;
+    background-color: #f4f4f4;
+}
+
+/*---BACK TO TOP BUTTON---*/
+#scrollToTopBtn {/*The button itself, make sure it's a set position at all times no matter scroll and somewhat transparent*/
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+
+    opacity: 0.7;
+
+    border: none;
+    outline: none;
+    background-color: #666;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+}
+#scrollToTopBtn img{/*the arrow image itself within the button icon*/
+    width: 40px;
+    height: 40px;
+}
+  
+#scrollToTopBtn:hover {/*on hover, change*/
+    background-color: lightgray;
+}
+/*----Page style---*/
+
+div{
+    display: block;
+}
+/*----header style---*/
+#masthead{/*the header itself, make sure it's a set position at all times no matter scroll and somewhat transparent*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+#masthead{/*initialize background color and padding values (itll be changed when resizing)*/
+    background-color: #f4f4f4;
+    padding: 10px 20px;
+}
+header{/*initialize display*/
+    display: block;
+}
+.website-header{/*initialize display*/
+    transition: all .3s linear;
+    transition-duration: 0.25s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+    transition-property: all;
+}
+
+#masthead .wrap{/*initialize display*/
+    position: relative;
+}
+@media(max-width: 500px){/*if the screen is less than 500px, change the header padding to be smaller space*/
+    .wrap{
+        padding: 0 7px;
+    }
+}
+.wrap{/*initialize display*/
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 0 17px;
+}
+#masthead .wrap .primary-header.fade{/*if the header is faded, change the opacity to be more transparent*/
+    opacity: 1;
+}
+#masthead .wrap .primary-header{/*initialize display for the whole page .primary header*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 2px;
+
+    transition: opacity .3s ease-in;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+    transition-delay: 0s;
+    transition-property: opacity;
+}
+.website-icon{/*initialize display for icon and set constnat width*/
+    flex: 0 1 auto;
+    align-self: auto;
+    width: 25%;
+}
+h1{
+    clear: both;
+}
+h1{/*initialize display for h1 things should be in em for resize purposes*/
+    font-size: 25px;
+    margin: 0.6em 0;
+    margin-top: 0.6em;
+    margin-bottom: 0.6em;
+
+    display: block;
+    margin-block-start: 0.6em;
+    margin-block-end: 0.6em;
+    font-weight: bold;
+}
+.website-title a{/*initialize display for the website title*/
+    transition: opacity .3s linear;
+    opacity: 1;
+    text-decoration: none;
+}
+.website-title a{/*initialize display for the website title, the a link happen relatively*/
+    display: inline-block;
+    position: relative;
+}
+/*-------searchbar/menu button style-------*/
+#nav-block{/*initialize display for the nav block*/
+    display: flex;
+    font-weight: 250;
+    font-size: 20px;
+}
+.blank-block{/*the block that shows up whenever nothing is there just to save the relative space*/
+    flex: 0 1 auto;
+    align-self: auto;
+    width: 50%;
+    height: 50px;
+
+    clear: both;
+    float: left;
+    z-index: 999999;
+}
+@media (max-width: 600px){/*if the screen is less than 600px, expand search wrap to fill box and change sizing*/
+    .search-wrap{
+        width:100%;
+        background-color:transparent;
+        display: none;
+        margin-top: 50px;
+        font-size: 20px;
+    }
+}
+.search-wrap{/*initialize display for the search wrap area*/
+    display: none;
+    width: 40%;
+    background-color: transparent;
+    margin-top: 10px;
+    font-size: 14px;
+}
+.search{/*initialize display for the search area*/
+    max-width: 1100px;
+    position: relative;
+}
+form{/*initialize any form to be displayed*/
+    display: block;
+}
+.search-wrap #search-head{/*search header area gets styled with a line at the bottom and no other styling to make it a box*/
+    width: 100%;
+    border-radius: 1.2px;
+    float: none;
+    margin-right: 35px;
+    font-size: 16px;
+    border-bottom: 1.2px solid #ccc;
+    background-color: transparent;
+}
+input[type="text"]{/*whenever input type is text this is the way it happens and shows up within the form*/
+    color: #666;
+    border: 0.05px solid #ccc;
+    padding: 14px;
+}
+input{
+    transition: 400ms border ease-in-out;
+}
+input{/*style inputs*/
+    color: #404040;
+    font-size: 16px;
+    line-height: 1.5;
+
+    line-height: normal;
+    font: inherit;
+}
+#searchsubmit{/*initialize display for the search submit button*/
+    display: none;
+}
+.menu-wrap li img{/*style the icon image for menu*/
+    padding: 10px;
+    color: #6a6766;
+    outline: none;
+}
+.search-icon img{/*style the icon image for the search*/
+    height: 25px;
+    width: 25px;
+    padding: 16px;
+    outline: none;
+    display: block!important;
+    text-align: left;
+    text-indent: -9999999px;
+}
+img{/*set basic image styling as default, never outline, base color, no background, and transition*/
+    background-color: transparent;
+    color: #999;
+    transition: color .3s ease-in;
+    outline: none;
+}
+#search-id-open{/*set the icon image for search whenever it's pressed: whenever search bar is open, option to "X" out of it to close*/
+    background-image: url(assets/icon\ images/X-icon.png);
+}
+.search-icon img:hover{/*fade off when hover*/
+    opacity: .5;
+}
+.menu-wrap{/*initialize display for the menu wrap*/
+    width: 25%;
+    flex: 0 1 auto;
+    align-self: auto;
+    position: relative;
+    text-align: right;
+}
+.menu-wrap ul{/*initialize display for the menu wrap ul to set the icons to their proper position using flex*/
+    text-align: right;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: row-reverse;
+    height: 50px;
+}
+ul{
+    list-style: disc;
+}
+.menu-wrap li{
+    display: inline-block;
+    position: relative;
+}
+
+/*--full menu icon nav bar--*/
+.big-menu img:hover{
+    opacity: .5;
+}
+li.big-menu img{/*style the icon image for menu*/
+    height: 25px;
+    width: 25px;
+    outline: none;
+    display: block!important;
+    text-align: left;
+    text-indent: -999999px;
+    transition: background-image .3s linear;
+}
+li.big-menu img.open{/*whenever its open, change the icon image to "X"*/
+    background-image: url(assets/icon\ images/X-icon.png);
+}
+
+/*--Full Menu (expanded full screen)--*/
+.full-menu{/*initialize display for the full menu **testing using vw for responsive design** also calculating the height this way*/
+    width: 100vw;
+    height: calc(100vh - 70px);
+    top: 70px;
+    background-color: #858687;
+    position: fixed;
+    z-index: 999999;
+    overflow: scroll;
+}
+.full-menu-wrap{/*initialize full menu wrap positioning and position style*/
+    position: relative;
+
+    max-width: 1832px;
+    padding: 0 38px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.full-menu .page-list-container{/*initialize full menu page list container positioning and position style*/
+    width: 25%;
+    margin-right: 8%;
+    margin-bottom: 30px;
+}
+@media (max-width: 800px){/*if the screen is less than 800px, expand search wrap to fill box and change sizing*/
+    .full-menu .page-list-container{
+        width: 100%;
+        margin-right: 0%;
+        margin-bottom: 30px;
+    }
+}
+.full-menu ul{/*initialize full menu ul positioning and position style*/
+    padding: 0px;
+    margin: 0 0 40px;
+}
+@media (max-width: 600px){/*if the screen is less than 600px, expand search wrap to fill box and change sizing*/
+    .full-menu ul{
+        margin: 0;
+    }
+}
+.full-menu li{/*initialize full menu li base color style*/
+    color: gray;
+}
+@media (max-width: 600px){/*if the screen is less than 600px, control font sizing of page content to allow for better look*/
+    .full-menu .page-list-container ul li a{
+        font-size: 15px;
+    }
+}
+@media (max-width: 900px){/*alter font sizing as page resizes to accomodate*/
+    .full-menu .page-list-container ul li a{
+        font-size: 24px;
+    }
+}
+.full-menu .page-list-container ul li a{/*set basic text parameters for topic menu text*/
+    color: #f5f5f5;
+    text-transform: uppercase;
+    line-height: 2;
+    padding-bottom: 5px;
+    border-bottom: 1px solid transparent;
+    transition: 300ms all ease-in-out;
+
+    font-size: 24px;
+    letter-spacing: 2px;
+    margin-right: -7px;
+
+    text-decoration: none;
+}
+.page-list-container ul li a{/*set basic text parameters for heading text for the topics*/
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 3.2px;
+    line-height: 2;
+    text-decoration: none;
+
+
+}
+.menu-item:hover{/*whenever it gets selected hover to change opacity*/
+    opacity: 0.5;
+}
+a{
+    color: #999;
+    transition: color .3s ease-in;
+}
+
+@media (max-width: 900px){/*if the screen is less than 900px, remove the text from the screen*/
+    .full-menu .about-block{
+        display: none;
+    }
+}
+.about-block{/*initialize display for the about block*/
+    width: 30%;
+    color: #d9d9d9;
+    padding-right: 12%;
+    margin-top: 30px;
+}
+.about-block p{/*set  font size for all text within that paragraph section*/
+    font-size: 13px;
+}
+p{
+    margin-bottom: 1.4em;
+}
+
+@media (max-width: 600px){/*if the screen is less than 600px, expand search wrap to fill box and change sizing*/
+    .full-menu .info-wrap, .full-menu .media-wrap{
+        width: 50%;
+        max-width: 150px;
+    }
+}
+@media (max-width: 640px){/*if the screen is less than 640px, change the flex direction to accomodate for changes*/
+    .full-menu-wrap{
+        flex-direction: column;
+    }
+}
+.full-menu .info-wrap, .full-menu .media-wrap, .full-menu .website-wrap{
+    margin-top: 35px;
+
+    width: 20%;
+    max-width: 150px;
+}
+span.menu-header{/*set basic text parameters for column text headers*/
+    font-family: "Verlag A", "Verlag B";
+    font-style: normal;
+    font-size: 12px;
+    font-weight: 420;
+    text-transform: uppercase;
+    letter-spacing: 2.6px;
+    margin-bottom: 10px;
+    display: block;
+    color: #c7c8c9;
+}
+.socials-wrap .newsletter{/*set size margin arameters for newsletter block*/
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+.newsletter .menu-head{
+    margin-bottom: 8px;
+}
+.full-menu input#EMAIL{/*input type email styling*/
+    width: 170px;
+    transition: border .25s ease-out;
+}
+input#SUBSCRIBE.button{/*input button type styling, make it a ser size and ensure background image for button is set properly within box*/
+    display: inline;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    margin-left: -2.5px;
+    text-indent: -99999px;
+    background-repeat: no-repeat;
+    background-size: 15px 15px;
+    background-position: center;
+    background-image: url('/assets/icon\ images/arrow-icon.png');
+}
+#subscribe input{/*wheneve rinput gets written to form, this is how it'll look*/
+    margin-top: 15px;
+    font-size: 12px;
+    background: transparent;
+    padding: 5px 10px;
+    letter-spacing: 2px;
+}
+input[type="email"]{/*set the input type email to be a style of border (very faint with minimal padding)*/
+    color: #666;
+    border-bottom: 1px solid #f5f5f5;
+    border-radius: 3px;
+    padding: 3px;
+}
+
+.socials-wrap a{/*style the area for social media icons*/
+    display: inline-block;
+    margin-right: 5px;
+    opacity: 7px;
+
+    background-color: transparent;
+    transition: color .3s ease-in;
+}
+.full-menu .socials-wrap a img{/*define where the icons are allowed to exist*/
+    max-height: 16px;
+    margin-right: 10px;
+    filter: invert(100%);
+}
+img{
+    height: auto;
+    max-width: 100%;
+}
+
+@media (max-width: 800px){
+    .page-image{
+        display: none;
+    }
+}
+.page-image{
+    width: 60%;
+    padding-bottom: 40px;
+    padding-top: 40px;
+}
+.page-image-specific{
+    max-height: 300px;
+    /*opacity: 0;*/
+    transition: 300ms opacity ease-in-out;
+}
+/*----------HOME PAGE CONTENT-------------*/
+/*-------------------------------------------------*/
+/*--general home page content--*/
+/*--initial page block--*/
+@media(max-width: 500px){/*change padding of main block section depending on screen size*/
+    #main{
+        padding: 0 20px;
+    }
+}
+#main{/*set stage for main section*/
+    max-width: 1832px;
+    padding: 0 40px;
+}
+ul.home{/*set stage for home section positioning*/
+    text-align: right;
+    position: relative;
+}
+.content-grid{/*define the content grid flex*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-right: -3%;
+}
+.content-grid{/*initialize padding and margin for everthing inside grid*/
+    padding: 0;
+    margin: 0;
+}
+.content-grid{
+    opacity: 1;
+    transition: all .35s ease-in;
+}
+.content-grid ul{
+    font-family: "Chronicle Display A", "Chronicle Display B";
+    font-weight: 300;
+    line-height: 1;
+}
+@media(max-width: 1130px){/*for each media query, define the width of the content grid*/
+    .home.content-grid.content-item.preview-image{
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 50px;
+    }
+}
+@media(max-width: 600px){
+    .home.content-grid.content-item.preview-image{
+        margin-bottom: 0;
+    }
+}
+.home.content-grid.content-item.preview-image{/*image preview resize initial*/
+    width: 60%;
+    flex-grow: 2;
+}
+@media(max-width: 1130px){/*dispaly type of image*/
+    ul.home.content-item.preview-image{
+        display: block;
+    }
+}
+ul.home.content-item.preview-image{
+    display: flex;
+    /*TODO add image styling*/
+}
+.home-section-wrap ul.home.content-item{/*flexible responsive bottom margin*/
+    margin-bottom: 3.5%;
+}
+@media(max-width: 600px){/*reset margin after small size to accomodate other items*/
+    .home-section-wrap .content-grid.content-item{
+        margin-bottom: 22px;
+    }
+}
+@media(max-width: 940px){/*define preview image space with resize again*/
+    .content-grid .content-item.preview-image{
+        width: 60%;
+        flex-grow: 2;
+    }
+}
+.home-section-wrap .content-grid .content-item{
+    width: 30%;
+}
+.home-section-wrap .content-grid .content-item{
+    margin-bottom: 40px;
+}
+@media(max-width: 500px){/*this time set it even more fully*/
+    .content-item.preview-image{
+        width: 95%;
+        margin-right: 5%;
+        margin-bottom: 40px;
+        flex-grow: 2;
+    }
+}
+@media(max-width: 500px){/*set a general content of the content grid for home page as full width when the screen is really thin*/
+    .content-grid .content-item{
+        width: 95%;
+        margin-right: 5%;
+        margin-bottom: 40%;
+        flex-grow: 1;
+        max-width: 100%;
+    }
+}
+@media(max-width: 780px){/*slight alteration of grow for smaller screens*/
+    .content-item.preview-image{
+        width: 95%;
+        margin-right: 5%;
+        margin-bottom: 40px;
+        flex-grow: 2;
+        max-width: 100%;
+    }
+}
+@media(max-width: 950px){
+    .content-grid .content-item{
+        width: 30%;
+        max-width: 100%;
+    }
+}
+.home-section-wrap .content-item{
+    position: relative;
+    margin-bottom: 4%;
+}
+.content-item.preview-image{/*initialize behavior of preview image on screen*/
+    flex-grow: 2;
+    max-width: 65%;
+    /*width: 45%;*/
+    margin-top: 40px;
+}
+@media(max-width: 1130px){/*initialize preview image padding, space between this top section and the rest of the page*/
+    .preview-image{
+        padding-bottom: 65%;
+    }
+}
+.preview-image{
+    padding-bottom: 43px;
+    transition: all 100ms linear;
+    /*position and size stuff*/
+}
+.page-image-preview{/*ensure it's positioned to the left of it's space*/
+    width: 80%;
+    float: left;
+}
+@media(max-width: 780px){
+    .content-item{
+        width: 45%;
+        margin-right: 5%;
+        flex-grow: 1;
+    }
+}
+.content-item{
+    width: 22%;
+    margin-right: 3.5%;
+    margin-bottom: 25px;
+    flex-grow: 1;
+    max-width: 30%;
+}
+ul.home .content-item.page-list{/*initialize page list*/
+    padding-top: 60px;
+    padding-right: 10px;
+}
+@media(max-width: 1130px){/*set page list to display none*/
+    .home.content-grid .content-item.page-list{
+        display: none;
+    }
+}
+.content-grid li{/*initialize list items to being unstyled as well as unordered by default*/
+    list-style-type: none;
+}
+.content-grid li ul li{
+    display: block;
+    line-height: 2;
+}
+ul.home li{/*initialize any content item as having this font with standard styling.*/
+    font-family: "Verlag A", "Verlag B";
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
+    color: gray;
+
+}
+ul.home li ul li a{/*individual menu items*/
+    color: #666;
+    font-size: 26px;
+    letter-spacing: 2px;
+    margin-right: -7px;
+
+    text-decoration: none;
+    /*border-right: 1px solid #666;*/
+}
+
+.menu-item a:hover{/*make the menu items "highlihgt" with a line when hover*/
+    border-right: 2px solid #666;
+}
+
+.image-caption{/*set the image caption to be vertical and absolute relative to position of the image wrapper*/
+    writing-mode: vertical-lr;
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 60px;
+    font-size: 8.5px;
+
+}
+@media (max-width: 1130px){/*the image caption should move to horizontal positioning underneith iamge when screen gets resized to where it becomes "smushed*/
+    .image-caption {
+     writing-mode: horizontal-tb;
+     margin: 5px auto;
+     right: auto;
+     display: block;
+     position: absolute;
+     bottom: -30px;
+     padding-bottom: 10px;
+    }
+    .content-item{/*also reset set padding*/
+        padding-bottom: 5px;
+    }
+}
+
+/*Top stories of 2023*/
+.top-stories-block{/*top stories overall section, takes up full screen with a 40px space above all its content*/
+    width: 100%;
+    height: auto;
+    margin-top: 40px;
+}
+.top-stories-head{/*the header for this block should take up full width */
+    margin-left: 10px;
+    padding: 5px;
+    float: left;
+    width: 100%;
+}
+.top-stories-head span{/*set font size*/
+    font-size: 30px;
+}
+@media screen and (max-width: 750px){/*change  font size with screen edits for dynamics*/
+    .top-stories-head span{
+        font-size: 26px;
+    }
+}
+@media screen and (max-width: 600px){
+    .top-stories-head span{
+        font-size: 22px;
+    }
+}
+@media screen and (max-width: 450px){
+    .top-stories-head span{
+        font-size: 18px;
+    }
+}
+.top-stories{/*actually set the wrap for the stories boxes*/
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+@media(max-width: 600px){/*change to column whenever smaller, full width so it becomes full gallery*/
+    .top-stories{
+        flex-direction: column;
+        width: 100%;
+    }
+}
+@media(max-width: 600px){
+    .top-stories .top-story{
+        width: 70%;
+        flex-grow: 2;
+        max-width: 100%;
+    }
+}
+.top-story{
+    width: 48%;
+    padding: 5px;
+}
+@media screen and(max-width: 600px){
+    .top-story{
+        width: 100%;
+    }
+}
+.top-story-text-box{/*initialize text positioning and alignment*/
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+    height: auto;
+    padding-top: 10px;
+    text-align: left;
+}
+#top-story-head{/*header settings and padding*/
+    color: #404040;
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding-right: 15px;
+}
+.top-story-text-box:hover{/*hover effect to "bolden" the caption text for readability*/
+    color: rgb(55, 52, 52);
+    font-size: 20px;
+    line-height: 2;
+}
+#top-story-text{/*set the text to be gray and standard font*/
+    color: gray;
+    font-size: 16px;
+    line-height: 1;
+    text-transform: none;
+
+}
+@media screen and (max-width: 750px) {/*font willl resize as page resizes*/
+    #top-story-text {
+      font-size: 9px;
+      letter-spacing: .5px;
+    }
+}
+@media screen and (max-width: 550px){/*font dissappears when page goes in "gallery mode"*/
+    .top-story-text-box{
+        display: none;
+    }
+}
+@media screen and (max-width: 800px){
+    #top-story-text{
+        display: none;
+    }
+}
+
+/*This week's featured stories*/
+.features-block{/*overall block settings and margin initialization*/
+    width: 100%;
+    height: auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+.featured-stories-head{/*header font settings*/
+    font-size: 30px;
+
+}
+@media screen and (max-width: 750px){/*make sure span font size gets smaller with resize*/
+    .featured-stories-head span{
+        font-size: 26px;
+    }
+}
+@media screen and (max-width: 600px){
+    .featured-stories-head span{
+        font-size: 22px;
+    }
+}
+@media screen and (max-width: 450px){
+    .featured-stories-head span{
+        font-size: 18px;
+    }
+}
+.featured-stories{/*stories are flex in a row with equal spacing in between*/
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+@media(max-width: 600px){/*becomes a column on resize and full width*/
+    .featured-stories{
+        flex-direction: column;
+        width: 100%;
+    }
+}
+@media(max-width: 600px){
+    .featured-stories .featured-story{
+        width: 70%;
+        flex-grow: 2;
+        max-width: 100%;
+    }
+}
+.featured-story{/*initialize width of each story block*/
+    width: 30%;
+    padding: 5px;
+}
+@media screen and(max-width: 600px){/*becomes full width*/
+    .featured-story{
+        width: 100%;
+    }
+}
+.feature-article-text-box{/*text comment box get positioned relative so things stack nicely*/
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+    height: auto;
+    padding-top: 10px;
+    text-align: left;
+}
+.feature-article-text-box:hover{/*hover effect to "bolden" the caption text for readability*/
+    color: rgb(55, 52, 52);
+    font-size: 20px;
+    line-height: 2;
+}
+.feature-article-link:hover{/*also bolden the link text*/
+    opacity: .5;
+}
+#feature-article-head{/*set the style for the header*/
+    color: #404040;
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding-right: 15px;
+}
+#feature-text{/*set the style for the comment text*/
+    color: gray;
+    font-size: 16px;
+    line-height: 1;
+    text-transform: none;
+}
+@media screen and (max-width: 750px) {/*resize to be dynamic with each resize*/
+    #feature-text {
+      font-size: 9px;
+      letter-spacing: .5px;
+    }
+}
+@media screen and (max-width: 550px){
+    .feature-article-text-box{
+        display: none;
+    }
+}
+@media screen and (max-width: 800px){
+    #feature-text{
+        display: none;
+    }
+}
+
+/*----archive bottom page block-----*/
+.archive-block{/*archive block initial content, everything within it will be background a different color than original*/
+    background-color: #bdbebf;
+    padding: 50px 5px;
+
+}
+@media(max-width: 500px){/*set different width*/
+    .archive-block .wrap{
+        padding: 0 27px;
+        max-width: 1832px;
+    }
+}
+@media(max-width: 800px){/*change positioning of features to wrap*/
+    .archive-feature{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+        flex-wrap: wrap;
+    }
+}
+.archive-feature{/*each feature is centreed in block*/
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+@media(max-width: 800px){/*reset margin for image and resize to be full width*/
+    .archive-feature-img{
+        width: 100%;
+        padding-right: 0;
+        margin: 0;
+    }
+}
+.archive-feature-img-main{/*set block image to be 56% of the width*/
+    width: 56%;
+}
+.archive-feature-img-main img{/*take up full block*/
+    width: 100%;
+}
+figure .archive-magazine-img{
+    transition: all .4s ease-in-out;
+}
+
+.archive-feature-text{/*this takes up 32% of the block and is centred*/
+    width: 32%;
+    text-align: center;
+    padding-left: 20px;
+}
+@media (max-width: 800px){/*reset margin for text and resize to be full width*/
+    .archive-feature-text{
+        width: 100%;
+        text-align: left;
+        padding-left:0;
+        margin-bottom: 40px;
+    }
+}
+@media(max-width: 800px){/*change text style to accomodate for resize*/
+    .archive-feature-text h3{
+        margin-top: 12px;
+        font-size: 32px;
+        max-width: 500px;
+    }
+}
+@media(max-width: 950px){/*dynamic margin*/
+    .archive-feature-text h3{
+        font-size: 23px;
+        margin-top: 24%;
+        letter-spacing: 4px;
+    }
+}
+@media(max-width: 1200px){
+    .archive-feature-text h3{
+        font-size: 28px;
+        margin-top: 24%;
+        letter-spacing: 4px;
+    }
+}
+.archive-feature-text h3{/*set style for header with a dynamic margin and more letter spacing*/
+    font-size: 35px;
+    letter-spacing: 4px;
+    color: #404040;
+    margin-top: 23%;
+    font-weight: normal;
+}
+@media(max-width: 800px){/*minimize font size with screen(*/
+    .archive-feature-text span{
+        padding-left: 0;
+        font-size: 12px;
+    }
+}
+@media(max-width: 950px){
+    .archive-feature-text span{
+        font-size: 9px;
+    }
+}
+.archive-feature-text span{/*set style for the text with proper margin and padding*/
+    display: block;
+    color: rgb(113, 106, 106);
+    margin: 0 0 40px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1.8;
+    line-height: 2;
+    padding: 0 20px;
+}
+.header-featured-archive{/*set style for archive with border heading and more spacing*/
+    text-align: left;
+    letter-spacing: 2px;
+    font-size: 18px;
+    padding-bottom: 2.5px;
+    display: inline-block;
+    color: #fff;
+    padding-left: 2px;
+    border-top: 1px solid #fff;
+}
+
+.archive-feature-col{/*each column space will be 1/3 ish of full block and relatively positioned*/
+    float: left;
+    position: relative;
+    width: 32%;
+    list-style: none;
+}
+@media(max-width: 800px){/*reset width and position for each column*/
+    .archive-feature-col{
+        float:none;
+        position: relative;
+        width: 100%;
+    }
+}
+.archive-features{/*sets to flex row and wrap*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    padding-left: 40px;
+    margin-bottom: 40px;
+}
+.feature-link{/*each link will exist standard color and font size reset text decoration to overwrite list values*/
+    font-size: 12px;
+    display: block;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    color: #fff;
+    margin-top: 5px;
+}
+
+@media(max-width: 800px){/*full width when resized to gallery view*/
+    .feature-link img{
+        width: 100%;
+    }
+}
+.feature-link img{/*iamge is always 80% of its space*/
+    width: 80%;
+    height: auto;
+}
+
+.feature-header{/*header gets set to left alignment and initial font size*/
+    letter-spacing: 2px;
+    font-size: 13px;
+    text-align: left;
+    padding-bottom: 2px;
+    display: inline-block;
+    color: #fff;
+    padding-left: 2px;
+}
+.feature-origin{/*make vertical feature origin to sit with images*/
+    letter-spacing: 1px;
+    font-size: 12px;
+    color: #404040;
+    margin-top: 5px;
+    
+    writing-mode: vertical-rl;
+}
+@media screen and (max-width: 800px){/*change to horizontal as screen resizes*/
+    .feature-origin{
+        writing-mode: horizontal-tb;
+    }
+}
+.feature-link img:hover{/*hover effect for images to increase in size and "focus"*/
+    width: 82%;
+}
+/*--website footer--*/
+.footer{/*set footer to always be 100% of screen width*/
+    max-width: 100%;
+}
+.footer-menu-block{/*initialize footer block styling and positioning, dynamic padding*/
+    display: flex;
+    flex-direction: row;
+    padding-right: 10%;
+}
+#ending{/*set alternative background color*/
+    background-color: #4d4d4d;
+    color: gray;
+}
+@media (max-width: 800px){/*wrap information not shrink on resize*/
+    .website-information{
+        flex-wrap: wrap;
+    }
+}
+.website-information{/*initialize padding and dispaly*/
+    max-width: 100%;
+    padding: 100px 37px;
+    display: flex;
+}
+.website-information div{/*each section*/
+    width: 40%;
+    font-size: 12px;
+}
+@media(max-width: 800px){/*make each section full page width on resize*/
+    .website-information div{
+        width: 100%;
+    }
+}
+.about-text{/*initialize about text*/
+    padding-right: 15%;
+}
+@media(max-width: 800px){
+    .about-text{
+        margin-bottom: 40px;
+    }
+}
+@media(max-width: 400px){
+    .footer-menu-block{
+        display: flex;
+        width: 100%;
+        margin-bottom: 55px;
+    }
+}
+@media(max-width: 800px){
+    .footer-menu-block{
+        display: flex;
+        width: 50%;
+        margin-bottom: 40px;
+    }
+}
+.footer-menu-block span{/*set the style for span headings*/
+    display: block;
+    margin-bottom: 10px;
+    letter-spacing: 1.5px;
+    font-family: "Verlag A", "Verlag B";
+    font-size: 12px;
+}
+.info{
+    padding-left: 5px;
+}
+.footer-menu-item{
+    list-style-type: none;
+}
+.footer-menu-item a{/*default content list styling*/
+    text-decoration: none;
+}
+
+
+
+/*----------UPDATES PAGE CONTENT-------------*/
+/*-------------------------------------------------*/
+/*--main body--*/
+
+.main-area{/*set main area to be 100% of screen width with a set background, baseline vertical align and flex display*/
+    height: auto;
+    min-height: 650px;
+    padding: 0 20px;
+    padding-top: 40px;
+    margin: auto;
+    background: #f4f4f4;
+
+    display: flex;
+    vertical-align: baseline;
+}
+@media (max-width: 700px){/*column by default*/
+    .main-area{
+        flex-direction: column;
+    }
+    .date-content-caption{
+        display: none;
+    }
+}
+/*--dates/events/news--*/
+.update-sections-line{/*initial line above first column*/
+    padding-top: 20px;
+    border-top: 3px solid #e0e0e0;
+}
+.date-section-block{/*block columns for date section*/
+    display: flex;
+    flex-direction: column;
+
+    float: left;
+    width: 47%;
+    margin-right: 20px;
+
+}
+.date-section{/*actual content within the column gets set in row*/
+    display: flex;
+    flex-direction: row;
+
+    clear: both;
+    padding: 0 0 10px;
+}
+.date{/*date is 30% of the div to the left*/
+    width: 30%;
+    margin-right: 20px;
+    float: left;
+}
+.date-text{/*text of the date initialized*/
+    font-family: "Chronicle Display A", "Chronicle Display B";
+    color: #404040;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+}
+.date-content{/*right hand side of date section column*/
+    width: 60%;
+    float: left;
+}
+.date-content img{/*image takes up 100% of that right hand space*/
+    width: 100%;
+}
+.date-content-caption{/*margin bottom is set*/
+    margin-bottom: 10px;
+}
+.date-content-header a{/*text to the image is gray, remove list decoration*/
+    color: darkgray;
+    text-decoration: none;
+}
+.date-content-body{/*body styling*/
+    font-family: "Verlag A", "Verlag B";
+    color: #666;
+    font-size: 14px;
+    line-height: 18px;
+}
+.date-section-line{
+    padding-top: 8px;
+    border-top: 1.3px solid #e0e0e0;
+}
+/*--right hand sidebar--*/
+.updates-sidebar-block{/*set sidebar to be 47% of the page width, things appear top down in a column and wrap accordingly when resized*/
+    float: left;
+    width: 47%;
+
+    display: flex;
+    flex-direction: column;
+}
+.coming-soon{/*first top part section*/
+    margin-bottom: 40px;
+    background-color: rgb(235, 235, 235);
+    padding: 15px;
+    padding-bottom: 20px;
+
+}
+.coming-soon-img img{/*iamge is 100% width*/
+    width: 100%;
+    padding-bottom: 10px;
+}
+.update-content-header{/*header initial*/
+    color: darkgray;
+    text-decoration: none;
+    font-family: "Chronicle Display A", "Chronicle Display B";
+    font-size: 16px;
+}
+.coming-soon p1{
+    color: gray;
+}
+.update-line{/*seperation line*/
+    padding-top: 8px;
+    border-top: 1.3px solid rgb(235, 235, 235);;
+}
+/*--image slideshow in updates--*/
+.new-stuff-slideshow{/*slideshow is 100% width, and has a margin of auto to center it*/
+    max-width: 100%;
+    float: left;
+    margin: auto;
+}
+.updates-slideshow{/*whenever slideshow gets updated on condition, gets set to this class which removes it from visibility*/
+    display: none;
+}
+.last, .next{/*last and next buttons are set to be on top of the slideshow*/
+    cursor: pointer;
+    margin-top: -20px;
+    padding: 14px;
+    color: gray;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.4s ease;
+    border-radius: 10px;
+    user-select: none;
+}
+.next{/*next button is set to the right*/
+    float: right;
+}
+.slide-caption{/*caption styling for each slide content*/
+    color: darkgray;
+    font-size: 16px;
+    padding: 8px 10px;
+    float: left;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+.number-slide{/*numbers that stay on the image of the slide*/
+    color: darkgray;
+    font-size: 12px;
+    padding: 8px 10px;
+    position: absolute;
+}
+.fade{
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@keyframes fade{/*fade animation for slideshow*/
+    from{opacity:.4}
+    to{opacity:1}
+}
+
+/*----------ART PAGE CONTENT-------------*/
+/*-------------------------------------------------*/
+/*--general art page styling, also used in food, music, and other topic pages as needed--*/
+.art-page-wrap{/*wrapper for the entire page set to general width*/
+    padding: 0;
+    margin: 0 auto;
+    max-width: 1832px;
+    padding: 0 40px;
+}
+.art-page-grid{/*grid for the entire page, flex that wraps space between justification*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-right: -3%;
+
+    opacity: 1;
+    transition: all .3s ease;
+}
+.art-content-item.landscape{/*landscapt type images are a set width and can grow to 65% depending on intl size*/
+    flex-grow: 2;
+    width: 45%;
+    max-width: 65%;
+}
+.art-content-item.widelandscape{/*wide landscape image type is 80% with max 100% depending on size*/
+    flex-grow: 2;
+    width: 80%;
+    max-width: 100%;
+}
+.art-content-item{/*general item is 22%*/
+    width: 22%;
+    margin-right: 3.5%;
+    margin-bottom: 25px;
+    flex-grow: 1;
+    max-width: 30%;
+}
+.art-content-item img{/*images are always 100% of their designated block*/
+    transition: all .4s ease;
+    max-width: 100%;
+    display: block;
+    width: 100%;
+    height: auto;
+    /*width: 500px;*/
+}
+.content-caption{/*captions initialized*/
+    margin-top: 10px;
+    opacity: 1;
+    transition: opacity .3s ease;
+}
+.article-category{
+    line-height: 1;
+    color: transparent;
+}
+.article-category h5{/*caption text initialized*/
+    display: block;
+    line-height: 1;
+    color: #999;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color .3s ease;
+    font-family: "verlag A", "Verlag B";
+}
+.content-caption h2{
+    margin: 0 auto;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+.content-caption h2 a{
+    text-decoration: none;
+    color: gray;
+    font-size: 14px;
+    letter-spacing: 1;
+}
+.landscape .article-notes{/*landscape images and note section gets set*/
+    max-width: 70%;
+}
+.article-notes p{
+    font-size: 12px;
+}
+@media (max-width: 950px){/*landscape changes on resize*/
+    .art-page-grid .art-content-item.landscape{
+        width: 64%;
+        flex-grow: 2;
+    }
+}
+@media (max-width: 950px){
+    .art-page-grid .art-content-item{
+        width: 30%;
+        max-width: 100%;
+    }
+}
+
+
+
+/*----------FEATURED ARTICLE PAGE CONTENT-------------*/
+/*-----------------------Reused across topic pages--------------------------*/
+.featured-article{/*initialize featured articles */
+    margin: 0 auto 0;
+    display: flex;
+}
+/*--article text--*/
+.featured-article-body.fade{
+    opacity: 1;
+    position: relative;
+}
+.featured-article-body{/*initialize featured article body content, will be 40% width*/
+    transition: all .3s ease-in;
+    width: 40%;
+    opacity: 0;
+}
+@media(max-width: 900px){/*wraps when resized*/
+    .featured-article{
+        flex-wrap: wrap;
+    }
+}
+@media(max-width: 900px){/*also becomes fullscreen when resized*/
+    .featured-article-body{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+.article-body{/*for now, padding initialized*/
+    transition: opacity .4s ease;
+    margin-bottom: 20px;
+    padding-left: 8px;
+
+    padding-right: 30px;
+    margin-top: 40px;
+}
+.featured-content{/*content based on left margin*/
+    margin: 24px 0 0;
+}
+.article-body .featured-content{/*sets max width*/
+    max-width: 370px;
+}
+.featured-header{
+    margin-top: 50px;
+}
+.featured-categories{/*text setup for each category header*/
+    line-height: 1;
+    display: block;
+
+    color: #999;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color .3s ease;
+    font-family: "verlag A", "Verlag B";
+}
+.article-title{/*title text setup*/
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin: 5px 0 0;
+}
+p.article-caption{/*paragraph text setup specific to article caption class*/
+    letter-spacing: 1px;
+    font-size: 12px;
+    padding: 20px 0 20px 50px;
+    line-height: 2;
+    color: #666;
+    font-style: italic;
+}
+@media (max-width: 900px){/*paragraph overriden on resize*/
+    .article-body p{
+        font-size: 14px;
+        max-width: 100%;
+        line-height: 2;
+    }
+}
+@media(max-width: 900px){
+    .article-body-text{
+        columns: 2;
+        column-gap: 40px;
+    }
+}
+.article-body-text p{/*general paragraph size and space*/
+    font-size: 15px;
+    max-width: 500px;
+    padding-right: 48px;
+    line-height: 2;
+}
+button[type="font-button"]{ /*--font size buttons--*/
+    border: none;
+    background-color: #e0e1e2;
+}
+button[type="font-button"]:hover{ /*--font size buttons when hovered over--*/
+    background-color: #d0d1d2;
+}
+/*--article photos--*/
+.clear{/*clears floats*/
+    clear: both;
+}
+.article-images{/*initialize article images*/
+    transition: width .3s ease;
+    width: 60%;
+    padding-left: 15px;
+    padding-top: 50px;
+}
+@media (max-width: 900px){/*article images overriden on resize*/
+    .article-images{
+        margin-bottom: 40px;
+    }
+}
+.article-images-wrap{/*initialize article images wrap*/
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+}
+@media (max-width: 900px){/*article images set margin /padding*/
+    .article-images-wrap{
+        padding-bottom: 15px;
+        margin-bottom: 0;
+    }
+}
+.article-image-portrait{/*portrait type sets to 100% */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /*width: 47%;*/
+    max-width: 100%;
+    /*padding-right: 20px;*/
+    padding-bottom: 20px;
+}
+.article-image-portrait .article-img{
+    max-width: 57%;
+}
+.article-images-landscape img{
+    width: 100%;
+    max-width: 100%;
+}
+
+
+
+/*--further reading block--*/
+.further-reading-block{/*initialize further reading block background and padding*/
+    background-color: #e0e1e2;
+    padding: 0 20px 60px 15px;
+}
+.further-reading-wrap{/*wrapper div for content is 100% the screen and flex display in a row*/
+    display: flex;
+    max-width: 100%;
+    padding: 0 10px 0 20px;
+}
+.further-reading{/*takes up full space given*/
+    width: 100%;
+}
+.further-reading-block .further-reading-wrap div h3{/*sets the text and font styling for the headers within further reading space*/
+    text-align: left;
+    letter-spacing: 2px;
+    font-size: 12px;
+    margin-top: 80px;
+    margin-bottom: 60px;
+    display: inline-block;
+    border-bottom: 1px solid darkgray;
+    padding-bottom: 2px;
+    padding-left: 2px;
+}
+.further-reading-grid{/*sets flex grid*/
+    margin-right: 0;
+    flex-wrap: nowrap;
+
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+}
+@media (max-width: 900px){/*wraps when resized*/
+    .further-reading-grid{
+        flex-wrap: wrap;
+    }
+}
+.further-reading-content.landscape{/*initializes landscape type*/
+    flex-grow: 2;
+    width: 47%;
+    max-width: 64%;
+}
+.further-reading-content{/*content standard */
+    width: 22%;
+    margin-right: 3.5%;
+    margin-bottom: 25px;
+    flex-grow: 1;
+    max-width: 30%;
+}
+@media (max-width: 950px){
+    .further-reading-grid .further-reading-content.landscape{/*landscape behavior on resize*/
+        width: 60%;
+        flex-grow: 2;
+    }
+}
+@media (max-width: 950px){/*standard/portrait content behavior on resize*/
+    .further-reading-grid .further-reading-content{
+        width: 30%;
+        max-width: 100%;
+    }
+}
+.further-reading-content-caption{
+    opacity: 1;
+}
+.further-reading-content .further-reading-content-caption{
+    transition: opacity .3s ease;
+    margin-top: 10px;
+}
+.featured-article-category{/*category heading styling*/
+    line-height: 1;
+    display: block;
+
+    color: darkgray;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color .3s ease;
+    font-family: "verlag A", "Verlag B";
+}
+.further-reading-content-caption h2{/*caption heading styling*/
+    margin: 0 auto;
+    margin-bottom: 12px;
+    line-height: 1;
+}
+.further-reading-content-caption h2 a{
+    text-decoration: none;
+    color: #666;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+/*----------CONTACT PAGE + ABOUT US CONTENT-------------*/
+/*-------------------------------------------------*/
+.center{
+    justify-content: center;
+    text-align: center;  
+}
+.about-contact-main{/*initialize about us and contact page background and padding*/
+   /* background-color: #e0e0e0;*/
+    padding: 0 20px 60px 15px;
+}
+.about-us-head{/*initialize about us header full screen size*/
+    max-width: 100%;
+    padding: 60px;
+}
+.about-us-title img{/*icon image is 15% of the screen at all times*/
+    width: 15%;
+}
+.about-us-head h2{/*initialize about us header text*/
+    /*border-top: 1px solid gray;*/
+    font-size: 24px;
+    color: #666;
+    font-family: "EB Garamond rev=1";
+    font-weight: bold;
+}
+.about-us-title p{/*initialize about us header text*/
+    font-size: 12px;
+    color: gray;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.about-us-wrap{/*wrapper sections is set to flex in a row wrapped when resized with an even margin in between content*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.our-mission-image{/*image space is always maximum 47%*/
+    max-width: 47%;
+}
+@media (max-width: 800px){
+    .our-mission-image{/*image space is now maximum 100%*/
+        max-width: 100%;
+    }
+}
+@media (max-width: 800px){
+    .our-mission-text{
+        max-width: 100%;/*text follows accordingly*/
+    }
+}
+.our-mission-image img{/*image itself is always 100% space given*/
+    /*height: 20em;*/
+    width: 100%;
+}
+.our-mission-text{
+    max-width: 47%;
+    align-items: center;
+    justify-content: center;
+
+    display: flex;
+    flex-direction: column; 
+}
+.about-us-image{/*margin auto so centers*/
+    margin: auto;
+    padding-top: 40px;
+}
+.about-us-image img{
+    width: 98%;
+
+}
+.about-us-block{/*set new background, this handles our mission content*/
+    width: 100%;
+    background-color: #404040;
+}
+.about-us-text{/*set text to center and style content to be centered*/
+    align-items: center;
+    display: flex;
+    flex: 1 1;
+    flex-direction: column;
+    margin: 32px auto 64px;
+    width: 100%;
+}
+.about-us-block div h2{/*color for headings in new background set*/
+    color: #e0e0e0;
+}
+.about-us-text h2{
+    padding-top: 40px;
+}
+.about-us-text p{
+    color: #e0e0e0;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 0 20px;
+    padding-bottom: 60px;
+    text-align: center;
+}
+/*------------CONTACT PAGE CONTENT-------------*/
+.contact-us-head{/*initialize contact us header full screen size*/
+    max-width: 100%;
+    padding: 60px;
+}
+.contact-us-title img{/*image for icon is always 15% of the screen*/
+    width: 15%;
+}
+.contact-us-head h2{/*subheading text initialized for times*/
+    font-size: 15px;
+    color: #666;
+}
+.contact-us-head h2:hover{/*on hover, increase font size*/
+    font-size: 20px;
+}
+@media screen and (min-width: 1000px){/*establish grid template at screen size*/
+    .contact-information{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+@media screen and (min-width: 550px) and (max-width: 1000px){/*update grid columns and margns*/
+    .contact-information{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+.contact-information{/*contact information is set to a grid and gaps set accordingly*/
+    margin: 1.5em 1em 2.6em 1em;
+    column-gap: 2em;
+    row-gap: 0.5em;
+}
+.contact-information div span img{/*iamges styled and set within grid boxes, make rounded and give shadow*/
+    width: 120px;
+    height: 120px;
+    border-radius: 50px;
+    box-shadow: 5px 5px 10px 2px gray;
+}
+.contact-information div span img:hover{/*amplify shadow and pop out when hover*/
+    width: 140px;
+    height: 140px;
+    box-shadow: 10px 10px 15px 4px lightsteelblue;
+    border-radius: 60px;
+}
+.enquiry-form-wrap{/*set enquiry form space*/
+    padding-top: 20px;;
+    padding-bottom: 20px;
+    margin-left: 40px;
+}
+@media (min-width: 1010px){/*size grid for enquiry form on screen set*/
+    .enquiry-form-wrap{
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width: 570px){/*reset padding to accomodate for smaller screen*/
+    .enquiry-form-wrap{
+        padding-top: 0;
+    }
+}
+.form{/*in general, dispaly form inline*/
+    display: inline;
+}
+.enquiry-form-wrap form section {/*set the grid template initially*/
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
+}
+.enquiry-form-content {/*content will be of this style with a solid border - make sure its thin*/
+    padding: 0.88rem;
+    margin: 0.15em 0;
+    width: 100%;
+    font-size: 0.9rem;
+    resize: none;
+    outline-width: 0;
+    background: transparent;
+    border: 0.5px solid #404040;
+}
+.enquiry-form-img img{/*set the image to the right and fit the image to wrap the content of the grid for a cohesive wide look*/
+    width: 80%;
+    object-fit: cover;
+    margin-left: 100px;
+}
+
+/*------------report-------------*/
+.image-citation-block{
+    font-size: 10px;
+    color: gray;
+}
+.reference-list li{
+    list-style: none;
+    color: gray;
+}
+.dark-mode {/*set dark mode button influence status to take priority and override other css*/
+    background-color: darkgray !important;
+    color:  #e0e0e0 !important;
+}
+#darkMode img{/*set the image to be 25px by 25px*/
+    height: 25px;
+    width: 25px;
+    outline: none;
+    display: block!important;
+    text-align: left;
+    text-indent: -9999999px;
+}
+#darkMode{
+    background-color: transparent;
+    border: none;
+}
+#darkMode img:hover{
+    opacity: 0.4;
+}

@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!--stylesheet-->
+    <link href="mainstyle.css" rel="stylesheet" media="all" type="text/css">
+    <button ></button>
+
+
+    <!--javascript-->
+    <script src="javascript/gen-javascript.js" defer></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="title" content="MAGAZINE">
+    <meta property="description" content="We are a Washington DC based magazine made for creative students seeking inspiration based in the area. We cover art, culinary, and music scenes. Feel free to use us as your next reccomendation!">
+    <meta property="url" content="https://themagazine.com/">
+    <meta property="site_name" content="MAGAZINE">
+    <meta name="author" content="Emma Ryla Barnes">
+    
+    <meta name="keywords" content="magazine, creative, washington DC, Maryland, Virginia, DMV, Art, Culture, Food">
+    
+    <title>RICE MAGAZINE  - For the DC Creative</title>
+
+  </head>
+  <body id="body-id">
+    <div id="page" class="website">
+      <!--Universal Masthead-->
+      <!--includes the website title, nav block/search/menu buttons-->
+      <header id="masthead" class="website-header">
+        <div class="wrap">
+          <div class="primary-header fade">
+            <!-- .website-icon -->
+            <div class="website-icon">
+              <h1 class="website-title">
+                <a href="home.html" rel="home">
+                 <img src="assets/icon images/Rice-icon.png" alt="magazine logo title">
+                </a>
+              </h1>
+            </div>
+            <!--nav-block-->
+            <nav id="nav-block" class="blank" style="display: block;"><!--initialize display to block for now, will be changed with interaction!-->
+              <span class="blank-block" style="display: inline;"></span><!--initialize display to inline for now, will be changed with interaction!-->
+            </nav>
+            <!-- .search-wrap -->
+            <!--has the form and a section containing the two input parts, ends up just linking back to home page as there is no database  yet to link the search capability to-->
+            <div class="search-wrap" id="search-wrapper" style="display: none;"><!--initialize display to none, will be changed with access!-->
+              <div class="search">
+                <form role="search" method="get" id="searchform" class="searchform" action="https://themagazine.com/" autocomplete="off">
+                  <div>
+                    <input type="text" value name="s" id="search-head" placeholder="Search themagazine.com">
+                    <input type="submit" id="searchsubmit" value="Search">
+                  </div>
+                </form>
+              </div>
+            </div>
+          <!--.menu-wrap-->
+          <!--triggers view and hiding of the nav block above, and full expanded menu "page"-->
+          <div class="menu-wrap" >
+            <ul>
+              <li onmousedown="showAndHideMenu()" class="big-menu" style="display: inline-block;">
+                <!--a id="menu-id">Menu</a-->
+                <img src="assets/icon images/menu-icon.png" alt="menu icon" id="menu-icon">
+              </li>
+              <li>
+                <button onclick="toggleDark()" id="darkMode">
+                  <img src="assets/icon images/dark-mode.png" alt="dark mode icon" id="dark-mode-icon">
+                </button>
+              </li>
+              <li onmousedown="showAndHideSearch()" class="search-icon" style="display: inline-block;">
+                <img src="assets/icon images/search-icon.png" alt="search icon" id="search-icon">
+              </li>
+            </ul>
+          </div>
+          </div>
+        </div>
+        
+      </header>
+      <!--Full Menu Expanded-->
+      <!--contains the entire expanded navigation menu: 
+          regular header is still visible
+          list of pages and links to everything
+          image correponding to page
+          page footer including
+            about block
+            columns with information on website
+              info
+              website
+              contact
+            email connection
+              form with input fields
+              with social media icons to connect-->
+      <div class="full-menu" id="expanded-menu-id" style="display: none;">
+        <div class="full-menu-wrap">
+          <div class="page-list-container">
+            <!--Holds all the pages and their links, also id's which image to call to display upon hover-->
+            <ul id="page-list" class="menu">
+              <li id="artPage" class="menu-item">
+                <a href="art-topic-page.html">
+                  Art
+                </a>
+              </li>
+              <li id="foodPage" class="menu-item">
+                <a href="food-topic-page.html">
+                  Food
+                </a>
+              </li>
+              <li id="musicPage" class="menu-item">
+                <a href="music-topic-page.html">
+                  Music
+                </a>
+              </li>
+              <li id="updatesPage" class="menu-item">
+                <a href="updates-page.html">
+                  updates & dates
+                </a>
+              </li>
+              <li id="aboutPage" class="menu-item">
+                <a href="about-page.html">
+                  about
+                </a>
+              </li>
+              <li id="contactPage" class="menu-item">
+                <a href="contact-page.html">
+                  contact
+                </a>
+              </li>
+              <li id="reportPage" class="menu-item">
+                <a href="report.html">
+                  report
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!--Set initial page image-->
+          <div class="page-image">
+            <img class="page-image-specific" id="full-menu-image-preview" src="assets/page images/header images/artPage.jpg" alt="page art image (default)">
+          </div>
+          <!--about section text-->
+          <div class="about-block">
+            <p>
+              We are a Washington DC based magazine made for creative students seeking inspiration based in the area. We cover art, culinary, and music scenes. Feel free to use us as your next reccomendation!
+            </p>
+          </div>
+          <!--columns for information, media, and wrbsite category links-->
+          <!--structured as 
+            header
+            "list" block
+              link items-->
+          <div class="info-wrap">
+            <span class="menu-header">Info</span>
+            <ul class="info">
+              <li id="menu-item-contact" class="menu-item">
+                <a href="">contact</a>
+              </li>
+              <li id="menu-item-career" class="menu-item">
+                <a href="">career</a>
+              </li>
+            </ul>
+          </div>
+          <div class="media-wrap">
+            <span class="menu-header">Media</span>
+            <ul class="info">
+              <li id="menu-item-playlists" class="menu-item">
+                <a href="">playlists</a>
+              </li>
+              <li id="menu-item-films" class="menu-item">
+                <a href="">films</a>
+              </li>
+            </ul>
+          </div>
+          <div class="website-wrap">
+            <span class="menu-header">Website</span>
+            <ul class="info">
+              <li id="menu-item-terms" class="menu-item">
+                <a href="">terms</a>
+              </li>
+              <li id="menu-item-FAQs" class="menu-item">
+                <a href="">FAQs</a>
+              </li>
+            </ul>
+          </div>
+          <!--enter email block with social media link icons-->
+          <!--header span above block,
+              form to input emaik
+                label for initial input
+                input areas for text and  button style-->
+          <div class="socials-wrap" style="display: block;">
+            <div class="newsletter">
+              <span class="menu-header">Newsletter</span>
+              <form action="" method="post" id="subscribe" novalidate>
+                <label for="Email" style="display: none">Email</label>
+                <input type="email" value name="EMAIL" class="email" id="EMAIL" placeholder="enter email" required>
+                <input style type="submit" value="Subscribe" name="subscribe" id="SUBSCRIBE" class="button">
+              </form>
+            </div>
+            <!--section for small icon images links to social media "deadend"-->
+            <a href="" title="MAGAZINE Instagram">
+              <img src="assets/icon images/instagram.png" alt="Instagram" height="16" width="16">
+            </a>
+            <a href="" title="MAGAZINE Twitter">
+              <img src="assets/icon images/twitter.png" alt="Twitter" height="16" width="16">
+            </a>
+            <a href="" title="MAGAZINE Facebook">
+              <img src="assets/icon images/facebook.png" alt="Facebook" height="16" width="16">
+            </a>
+          </div>
+        </div>
+      </div>
+      <!--Home page Stuff-->
+      <div class="main-site-content" id="content">
+        <main class="main-stuff" id="main">
+          <!--Nav Sections- Page Grid, and Changing Image-->
+          <div class="home-section-wrap">
+            <ul class="content-grid home">
+              <li class="content-item preview-image">
+                <!--image that changes whenever you hover over different menu items, also caption to the right of it-->
+                <img class="page-image-preview" id="home-image-preview" src="assets/page images/header images/artPage.jpg" alt="page art image (default)">
+                <a href="" class="preview-image-link-to-page" id="home-image-preview-link">
+                  <span class="image-caption" id="preview-image-caption">Page 1 caption, author</span>
+                </a>
+              </li>
+              <!--page list, headed initially with subject/more headers with content links existing in a list-->
+              <li class="content-item page-list">
+                Subject
+                <ul id="subject-page" class="page-list">
+                  <li id="artPageHome" class="menu-item">
+                    <a href="art-topic-page.html" id='artPageId' data-img-url="" data-img-caption="Cezanne 1992" alt="cezanne painting">art</a>
+                  </li>
+                  <li id="foodPageHome" class="menu-item">
+                    <a href="food-topic-page.html" id='foodPageId' data-img-url="" data-img-caption="Lutece, Georgetown D.C." alt="figs from lutece">food</a>
+                  </li>
+                  <li id="musicPageHome" class="menu-item">
+                    <a href="music-topic-page.html" id='musicPageId' data-img-url="" data-img-caption="The Knights - Live at Shaker D.C." alt="live rock concert - the knights">music</a>
+                  </li>
+                </ul>
+                More
+                <ul id="updates-page" class="page-list">
+                  <li id="updatesPageHome" class="menu-item">
+                    <a href="updates-page.html" id='updatesPageId' data-img-url="" data-img-caption="Film taken by @domi" alt="film image done by dc film photographer domi">updates & dates</a>
+                  </li>
+                  <li id="aboutPageHome" class="menu-item">
+                    <a href="about-page.html" id='aboutPageId' data-img-url="" data-img-caption="art by graphic art.com" alt="branches painting">about</a>
+                  </li>
+                  <li id="contactPageHome" class="menu-item">
+                    <a href="contact-page.html" id='contactPageId' data-img-url="" data-img-caption="edgar, ink" alt="design by edgar on pinterest">contact</a>
+                  </li>
+                  <li id="reportPageHome" class="menu-item">
+                    <a href="report.html" id='reportPageId' data-img-url="" data-img-caption="art by graphic art.com" alt="branches painting">report</a>
+                  </li>
+                </ul>
+              </li>
+              <!--half and half row for Top Stories this Year-->
+              <li class="top-stories-block">
+                <div class="top-stories-head"><!--top header-->
+                  <span class="top-stories-head-text">top stories of this year</span>
+                </div>
+                <ul class="top-stories"><!--story parts with image, 
+                                                              text box
+                                                                link (header)
+                                                                and text content-->
+                  <li id="top-story-1" class="top-story">
+                    <img class="top-story-img" src="assets/page images/home page images/top-story-1.jpg" alt="glenstone museum window exhibition - 2020">
+                    <div class="top-story-text-box">
+                      <a class="top-story-link" href="">
+                        <strong id="top-story-head">The Window Room at Glenstone:</strong>
+                      </a>
+                      <p1 id="top-story-text">To walk through the Glenstone Museum, located in Maryland just 40 minutes drive out of most parts of DC, is a dream of inspiraiton and form. This particular window exhibit reflects what seems to be a recurring motif about the entire campus - we are one with the world.</p1>
+                    </div>
+                  </li>
+                  <li id="top-story-2" class="top-story">
+                    <img class="top-story-img" src="assets/page images/home page images/top-story-3.jpg" alt="flowers on film from hiking trail outside DC in maryland coast near chesepeak bay">
+                    <div class="top-story-text-box">
+                      <a class="top-story-link" href="">
+                        <strong id="top-story-head">On walking:</strong>
+                      </a>
+                      <p1 id="top-story-text">With most expanses of greenery being somewhat inaccessible to people lacking a car, the Great Falls towpath spanning from Georgetown to Pennsylvania via the Patomac river offers some of the most beautiful sources of sighs no matter the season. Spring is particularly condusive to flower watching, however.</p1>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <!--This week's featured stories-->
+              <!--featured header for whole block
+                  each featured story has:
+                    an image that starts its section
+                    a box for text
+                      a link with the title
+                      paragraph with caption-->
+              <li class="features-block">
+                <span class="featured-stories-head">this week: featured stories</span>
+                <ul class="featured-stories">
+                  <li id="story1" class="featured-story">
+                    <img class="feature-article-img" src="assets/page images/home page images/featured-article1.jpg" alt="featured article 1 image">
+                    <div class="feature-article-text-box">
+                      <a class="feature-article-link" href="">
+                        <strong id="feature-article-head">Duster - The Stratosphere</strong>
+                      </a>
+                      <p1 id="feature-text">Duster was a largely forgotten band from the late 90's that began to grow in popularity in recent years for their ambience. The album references interstellar travel with meaning being derived in their sound, rather than lyrics which - following the shoegaze style - are largely indistinguishable. Many cover bands have popped up, like The BAND playing on 01/29</p1>
+                    </div>
+                  </li>
+                  <li id="story2" class="featured-story">
+                    <img class="feature-article-img" src="assets/page images/home page images/featured-article2.jpg" alt="featured article 2 image">
+                    <div class="feature-article-text-box">
+                      <a class="feature-article-link" href="">
+                        <strong id="feature-article-head">Sculptures at the National Gallery</strong>
+                      </a>
+                      <p1 id="feature-text">There is a distinctive character in the collections of the national gallery, specifically in their sculptures which you can miander around for hours. Entry is free and hours are pretty regular so I find myself walking the halls and zoning off at the marble for hours.</p1>
+                    </div>
+                  </li>
+                  <li id="story3" class="featured-story">
+                    <img class="feature-article-img" src="assets/page images/home page images/featured-article3.jpg" alt="featured article 3 image">
+                    <div class="feature-article-text-box">
+                      <a class="feature-article-link" href="">
+                        <strong id="feature-article-head">Natural Wine</strong>
+                      </a>
+                      <p1 id="feature-text" >There is something natural about casually meeting old friends at a wine bar and sharing clearly made-to-order food and this place delivers. Off 14th street is a beautiful inlet with plants that moonlight on a saturday catches beautifully. Pop in for drinks and a chat!</p1>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </main>
+      </div>
+      <!--archive features-->
+      <!--archived feature has 
+          the main header image at the start of the block
+          the title section 
+            a header
+            a text section
+          from there the title for featured articles
+          wrapper for features
+            each feature column has
+              an image
+              a date/issue-->
+      <div class="archive-block">
+        <div class="wrap">
+          <div class="archive-feature">
+            <div class="archive-feature-img-main">
+                <img src="assets/page images/home page images/archive-cover-img.jpg" alt="archive magazine header image" width="47%">
+            </div>
+            <div class="archive-feature-text">
+              <h3>collections from the archive</h3>
+              <span>DC based magazine for creatives on the subject of food, music, art, and more.</span>
+            </div>
+          </div>
+          <h2 class="header-featured-archive">Featured from the archive</h2>
+          <div class="archive-features">
+            <div class="archive-feature-col">
+              <a href="" class="feature-link">
+                <img src="assets/page images/home page images/featured-archive-1.jpg" width="" height="" class="archive-feature-img" id="archive-feature-img1" alt="archive feature 1 image">
+                <span class="feature-origin">June 2022 Online Issue</span>
+              </a>
+            </div>
+            <div class="archive-feature-col">
+              <a href="" class="feature-link">
+                <img src="assets/page images/home page images/featured-archive-2.jpg"  height="" class="archive-feature-img" id="archive-feature-img1" alt="archive feature 2 image">
+                <span class="feature-origin">July 2021 Online Issue</span>
+              </a>
+            </div>
+            <div class="archive-feature-col">
+              <a href="" class="feature-link">
+                <img src="assets/page images/home page images/featured-archive-3.jpg" width="" height="" class="archive-feature-img" id="archive-feature-img1" alt="archive feature 3 image">
+                <span class="feature-origin">May 2021 Gallery</span>
+              </a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <!--scroll to top button + its icon image-->
+    <button onclick="toTopFunction()" id="scrollToTopBtn">
+      <img src="assets/icon images/to-top-btn.png" alt="back to top button">
+    </button>
+    <!--Page Footer-->
+    <!--footer has 
+      a block for website information
+      a block for columns of info
+        info header span
+          content items for each
+      a block for newsletter signup and socials
+        with a header
+        form
+          inputs and base
+        social media icon links-->
+      <footer id="ending" class="footer">
+        <div class="website-information">
+          <div class="about-text">
+            <p>We are a Washington DC based magazine made for creative students seeking inspiration based in the area. We cover art, culinary, and music scenes. Feel free to use us as your next reccomendation!</p>
+          </div>
+          <!--information columsn-->
+          <div class="footer-menu-block">
+            <div class="info-wrap">
+              <span class="menu-header">Info</span>
+              <ul class="info">
+                <li id="menu-item-contact" class="footer-menu-item">
+                  <a href="">contact</a>
+                </li>
+                <li id="menu-item-career" class="footer-menu-item">
+                  <a href="">career</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <div class="media-wrap">
+                <span class="menu-header">Media</span>
+                <ul class="info">
+                  <li id="menu-item-playlists" class="footer-menu-item">
+                    <a href="">playlists</a>
+                  </li>
+                  <li id="menu-item-films" class="footer-menu-item">
+                    <a href="">films</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div>
+              <span class="menu-header">Website</span>
+              <ul class="info">
+                <li id="menu-item-terms" class="footer-menu-item">
+                  <a href="">terms</a>
+                </li>
+                <li id="menu-item-FAQs" class="footer-menu-item">
+                  <a href="">FAQs</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!--social section with form input-->
+          <div class="footer-social">
+            <span class="menu-header">Newsletter</span>
+              <form action="" method="post" id="subscribe" novalidate>
+                <label for="Email" style="display: none">Email</label>
+                <input type="email" value name="EMAIL" class="email" id="EMAIL" placeholder="enter email" required>
+                <input style type="submit" value="Subscribe" name="subscribe" id="SUBSCRIBE" class="button">
+              </form>
+            <a href="" title="MAGAZINE Instagram">
+              <img src="assets/icon images/instagram.png" alt="Instagram" height="16" width="16">
+            </a>
+            <a href="" title="MAGAZINE Twitter">
+              <img src="assets/icon images/twitter.png" alt="Twitter" height="16" width="16">
+            </a>
+            <a href="" title="MAGAZINE Facebook">
+              <img src="assets/icon images/facebook.png" alt="Facebook" height="16" width="16">
+            </a>
+          </div>
+        </div>
+      </footer>
+  </body>
+</html>
